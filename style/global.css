@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;300;400;500;700;800;900&display=swap');
+
+
+html,
+body {
+  font-family: 'Heebo', sans-serif;
+  color: #000000;
+  text-align: right;
+}
+
+:root {
+  /* --main-color: #DF262D; */
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* .center-top {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+} */
+
+.center-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.center-right {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  flex-wrap: wrap;
+}
+
+.center-right-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: right;
+  flex-wrap: wrap;
+}
+
+.center-right-bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: right;
+  flex-wrap: wrap;
+}
+
+.center-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.center-left-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.center-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.center-between-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.center-around {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.center-around-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.img-cover {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+}
+
+.img-contain {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50%;
+}
+
+.router-link-exact-active {
+  color: #0b425c;
+  font-size: 19px;
+}
+
+.router-link-active {
+  color: #f98482 !important;
+  font-weight: bold;
+}
+
+.c-p {
+  cursor: pointer;
+}
+
+.mobile {
+  display: none;
+}
+
+.desktop {
+  display: block;
+}
+
+input,
+textarea {
+  padding: 3px;
+  outline: none;
+}
+
+button {
+  outline: none;
+}
+
+button:focus {
+  outline: none !important;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+
+@media (max-width: 767.98px) {
+
+  .mobile {
+    display: block;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+}
