@@ -8,9 +8,9 @@ body {
   text-align: right;
 }
 
-:root {
-  /* --main-color: #DF262D; */
-}
+/* :root {
+  --main-color: #DF262D;
+} */
 
 .center {
   display: flex;
