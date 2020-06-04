@@ -11,12 +11,12 @@
 </template>
 
 <script>
-  import ButtonLink from '@/components/ButtonLink.vue'
+  // import ButtonLink from '@/components/ButtonLink.vue'
 
   export default {
     name: 'titleSectionGallery',
     components: {
-      ButtonLink
+      // ButtonLink
     },
     data() {
       return {
@@ -42,6 +42,7 @@
     methods: {
       changeImg() {
         setInterval(() => {
+          console.log("asd")
           this.indexOfImg++
           if (this.indexOfImg === this.gallery.length) {
             this.indexOfImg = 0

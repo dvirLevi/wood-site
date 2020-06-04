@@ -1,5 +1,5 @@
 <template>
-    <div class="col-md-6  mt-4" >
+    <div class="col-md-6  mt-4  mb-4" >
       <div class="w-100 col-box img-cover center-right-bottom" :style="{backgroundImage: `url(${item.img})`}">
         <div class="m-5 c-p">
           <h2>{{item.text}} <i class="fas fa-arrow-left"></i></h2>

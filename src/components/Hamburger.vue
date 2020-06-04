@@ -1,5 +1,5 @@
 <template>
-  <div class="contain" :class="{change: showMenuMob}" @click="$emit('openClose')">
+  <div class="contain" :class="{change: openCloseMenu}" @click="$emit('openClose')">
     <div class="bar1"></div>
     <div class="bar2"></div>
     <div class="bar3"></div>
@@ -10,7 +10,7 @@
   export default {
     name: 'Hamburger',
     props: {
-      showMenuMob: Boolean,
+      openCloseMenu: Boolean,
     },
     data() {
       return {}
@@ -25,7 +25,7 @@
       flex-direction: column;
       justify-content: center;
       cursor: pointer;
-      z-index: 3;
+      z-index: 102;
     }
 
     .bar1,
