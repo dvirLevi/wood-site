@@ -19,7 +19,13 @@ Vue.use(VueRouter)
     path: '/productPage/:id',
     name: 'productPage',
     component: () => import('../views/productPage.vue')
+  },
+  {
+    path: '/beforePay',
+    name: 'beforePay',
+    component: () => import('../views/beforePay.vue')
   }
+  
 ]
 
 const router = new VueRouter({

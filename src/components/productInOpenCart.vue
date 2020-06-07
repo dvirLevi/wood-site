@@ -1,8 +1,6 @@
 <template>
-
-  <div class="w-100 center-top product p-4">
+  <div class="w-100 center-top product-in-cart p-4">
     <div class="img-cover img-product" :style="{backgroundImage: `url(${item.img})`}">
-
     </div>
     <div class="text p-2">
       <h4>{{item.name}}</h4>
@@ -51,22 +49,22 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  .product .img-product {
+  .product-in-cart .img-product {
     padding-top: 30%;
     width: 30%;
   }
 
-  .product .text {
+  .product-in-cart .text {
     width: 70%;
   }
 
-  .product .text h4 {
+  .product-in-cart .text h4 {
     font-size: 20px;
     font-weight: 300;
     ;
   }
 
-  .product .text h5 {
+  .product-in-cart .text h5 {
     font-size: 18px;
     font-weight: 300;
     ;

@@ -4,7 +4,7 @@
   <div class="bac-menu" @click="$emit('close')">
     <div class="wrap-items center-column-between">
       <div class="w-100 title center">
-        <h1 class="w-100">סל קניות</h1>
+        <h1 class="w-100 text-center">סל קניות</h1>
         <productInOpenCart v-for="item in inCart" :item="item" :key="item.id" />
       </div>
       <div class="w-100 ">
@@ -13,7 +13,7 @@
           <h3>₪{{Payable}}</h3>
         </div>
         <div class="w-100 border-top center p-4">
-          <ButtonLink text="מעבר לסל הקניות" class="h5" />
+          <ButtonLink text="מעבר לסל הקניות" link="/beforePay" class="h5" />
         </div>
       </div>
       <!-- <nuxt-link class="items-menu" :to="item.link" v-for="item in categories" :key="item.id">
@@ -97,9 +97,9 @@
     border-bottom: none;
   }
 
-  .bac-menu .title {
-    /* padding: 30px; */
-  }
+  /* .bac-menu .title {
+    padding: 30px;
+  } */
 
   .bac-menu .title h1 {
     padding: 30px;

@@ -158,6 +158,14 @@ a:active {
   color: inherit ;
 }
 
+.product-in-cart {
+  border-bottom: solid #dee2e6 1px;
+}
+
+.product-in-cart:last-child {
+  border-bottom: none;
+}
+
 
 @media (max-width: 767.98px) {
 

@@ -5,6 +5,9 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    clientDatdlis: {},
+    messengerPrice: 40,
+    ifMessenger: true,
     categories: [{
         name: "בית",
         link: "/",
@@ -146,6 +149,15 @@ export default new Vuex.Store({
       }
       return Payable
     },
+    PayablePlusMessenger: (state, getters) => {
+      let Payable = getters.Payable;
+      if(state.ifMessenger){
+        Payable + state.messengerPrice;
+      }
+      return Payable
+    },
+    
+   
   },
   mutations: {
     changeAmount(state, amountAndId) {
@@ -154,7 +166,10 @@ export default new Vuex.Store({
           state.products[i].amount = amountAndId.amount
         }
       }
-    }
+    },
+    setIfMessenger(state) {
+      state.ifMessenger = !state.ifMessenger
+    },
   },
   actions: {},
   modules: {}
