@@ -139,12 +139,19 @@ export default new Vuex.Store({
       })
       return inCart
     },
+    Payable: (state, getters) => {
+      let Payable = 0;
+      for (let x in getters.inCart) {
+        Payable += getters.inCart[x].amount * getters.inCart[x].price;
+      }
+      return Payable
+    },
   },
   mutations: {
     changeAmount(state, amountAndId) {
       for (let i in state.products) {
         if (state.products[i].id == amountAndId.id) {
-          state.products[i].amount += amountAndId.amount
+          state.products[i].amount = amountAndId.amount
         }
       }
     }

@@ -74,6 +74,14 @@ body {
   flex-wrap: wrap;
 }
 
+.center-column-between {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 .center-between-top {
   display: flex;
   align-items: flex-start;

@@ -19,6 +19,7 @@
         </div>
         <div class="w-100 center mt-5">
           <ButtonLink text="הוסף לעגלה" @customEvent="addToCart" class=" h5" />
+          <openCart v-if="openCart" @close="openCart = !openCart" />
         </div>
       </div>
       <div class="col-md-7">
@@ -38,15 +39,18 @@
 <script>
   // @ is an alias to /src
   import counter from '@/components/counter.vue'
+  import openCart from '@/components/openCart.vue'
 
   export default {
     name: 'productPage',
     components: {
-      counter
+      counter,
+      openCart
     },
     data() {
       return {
-amount: 1
+amount: 1,
+openCart: false
       }
     },
     methods: {
@@ -54,7 +58,8 @@ amount: 1
         this.$store.commit('changeAmount', {
           id: this.$route.params.id,
           amount: this.amount
-        })
+        });
+        this.openCart = !this.openCart;
       },
       incrementAmount(amount) {
         this.amount = amount

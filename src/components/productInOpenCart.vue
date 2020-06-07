@@ -1,0 +1,77 @@
+<template>
+
+  <div class="w-100 center-top product p-4">
+    <div class="img-cover img-product" :style="{backgroundImage: `url(${item.img})`}">
+
+    </div>
+    <div class="text p-2">
+      <h4>{{item.name}}</h4>
+      <h5>₪{{item.price}}</h5>
+      <div class="w-100 center-left">
+        <counter @customEvent="changeAmount" :passAmount="item.amount" />
+      </div>
+    </div>
+  </div>
+
+
+
+</template>
+
+<script>
+  import counter from '@/components/counter.vue'
+
+  export default {
+    name: 'productInOpenCart',
+    components: {
+      counter
+    },
+    props: {
+      item: Object
+    },
+    data() {
+      return {
+
+
+      }
+    },
+    computed: {
+
+
+    },
+    methods: {
+      changeAmount(amount) {
+        this.$store.commit('changeAmount', {
+          id: this.item.id,
+          amount: amount
+        });
+      }
+    }
+  }
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+  .product .img-product {
+    padding-top: 30%;
+    width: 30%;
+  }
+
+  .product .text {
+    width: 70%;
+  }
+
+  .product .text h4 {
+    font-size: 20px;
+    font-weight: 300;
+    ;
+  }
+
+  .product .text h5 {
+    font-size: 18px;
+    font-weight: 300;
+    ;
+  }
+
+
+  @media (max-width: 767.98px) {}
+</style>
