@@ -1,27 +1,20 @@
 <template>
   <div id="myModal" class="modal" @click.stop="$emit('customEvent')">
-
-  <!-- Modal content -->
-  <div class="modal-con center-all" >
-    <slot></slot>
+    <!-- Modal content -->
+    <div class="modal-con center">
+      <slot></slot>
+    </div>
   </div>
-
-</div>
 </template>
 
 <script>
-  // @ is an alias to /src
- 
+// @ is an alias to /src
 
-  export default {
-    name: 'Modal',
-    components: {
-    
-    },
-    props:{
-     
-    }
-  }
+export default {
+  name: "Modal",
+  components: {},
+  props: {},
+};
 </script>
 
 <style scoped>
@@ -38,8 +31,8 @@
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 /* Modal Content */
@@ -48,17 +41,14 @@
   margin: auto;
   padding: 30px;
   /* border: 1px solid #888; */
-  width:40%;
+  width: 40%;
   /* border: 3px dashed rgb(82, 82, 82); */
 }
 
-
-   @media (max-width: 767.98px) {
- 
-.modal-con {
-  padding: 15px;
-  width:77%;
+@media (max-width: 767.98px) {
+  .modal-con {
+    padding: 15px;
+    width: 77%;
+  }
 }
-
-   }
 </style>

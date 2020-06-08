@@ -24,7 +24,13 @@ Vue.use(VueRouter)
     path: '/beforePay',
     name: 'beforePay',
     component: () => import('../views/beforePay.vue')
+  },
+  {
+    path: '/pay',
+    name: 'pay',
+    component: () => import('../views/pay.vue')
   }
+  
   
 ]
 

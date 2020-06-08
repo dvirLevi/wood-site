@@ -12,7 +12,6 @@ Vue.component('ButtonLink', ButtonLink)
 Vue.component('Modal', Modal)
 Vue.config.productionTip = false;
 
-
 new Vue({
   router,
   store,
