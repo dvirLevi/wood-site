@@ -12,8 +12,8 @@
         <div class="border m-3"></div>
         <cart />
     </div>
-    <div class="col-md-4 center mobile-flex">
-      <h1 class="m-4">לוגו</h1>
+    <div class="col-md-4 center mobile-flex border-top">
+      <h1 class="m-2">לוגו</h1>
     </div>
   </div>
 </template>

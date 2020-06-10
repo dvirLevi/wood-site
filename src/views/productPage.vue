@@ -3,8 +3,13 @@
     <div class="row">
       <div class="col-md-5">
         <div class="w-100 center">
-          <h1>{{product.name}}</h1>
+          <h1 class="text-center">{{product.name}}</h1>
         </div>
+        <div class="col-md-7 mobile-flex">
+        <div class="w-100 img-cover img-product mt-md-0 mt-5" :style="{backgroundImage: `url(${product.img})`}">
+
+        </div>
+      </div>
         <div class="w-100 center mt-5 mb-5">
           <h5>₪{{product.price}}</h5>
         </div>
@@ -22,13 +27,13 @@
           <openCart v-if="openCart" @close="openCart = !openCart" />
         </div>
       </div>
-      <div class="col-md-7">
-        <div class="w-100 img-cover img-product" :style="{backgroundImage: `url(${product.img})`}">
+      <div class="col-md-7 desktop-flex">
+        <div class="w-100 img-cover img-product mt-md-0 mt-5" :style="{backgroundImage: `url(${product.img})`}">
 
         </div>
       </div>
     </div>
-    <div class="row row-description mt-5 border-bottom pb-5 pt-5">
+    <div class="row row-description  mt-md-5 mt-0 border-bottom pb-5 pt-5">
       <h4 class="col-md-4">{{product.description1}}</h4>
       <h4 class="col-md-4">{{product.description2}}</h4>
       <h4 class="col-md-4">{{product.description3}}</h4>
@@ -108,5 +113,11 @@ openCart: false
 
   .row-description h4:last-child {
     border-left: none;
+  }
+
+    @media (max-width: 767.98px) {
+  .row-description h4 {
+    border-left: none;
+  }
   }
 </style>
