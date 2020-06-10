@@ -1,10 +1,10 @@
 <template>
   <div class="row row-title img-cover" :style="{backgroundImage: `url(${gallery[indexOfImg].img})`}">
     <div class="col center">
-      <div class="text">
+      <div class="text p-3">
         <h1> מוצרים אדניות אדניות אדניות אדניות אדניות אדניות אדניות </h1>
         <h4> מוצרים אדניות אדניות אדניות אדניות אדניות אדניות אדניות </h4>
-        <ButtonLink text="המשך לחנות" class="mt-4" />
+        <ButtonLink text="המשך לחנות" link="/store/" class="mt-4" />
       </div>
     </div>
   </div>
@@ -58,10 +58,29 @@
 
 <style scoped>
   .row-title {
-    min-height: 750px;
+    height: 750px;
   }
 
   .row-title .text {
     width: 30%;
   }
+ @media (max-width: 767.98px) {
+     .row-title {
+    height: 340px;
+  }
+
+   .row-title .text {
+    width: 70%;
+    background-color: rgba(255, 255, 255, 0.582);
+    /* color: #fff; */
+  }
+
+   .row-title .text h1{
+    font-size: 23px;
+  }
+  .row-title .text h4{
+    font-size: 18px;
+  }
+ }
+     
 </style>

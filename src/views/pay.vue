@@ -62,7 +62,7 @@
         </form>
         <div class="center w-100">
           <h4 class="w-100 text-center">תשלומים</h4>
-          <div class="center w-100 select-num-payment">
+          <div class="center w-100">
             <v-select class="w-100" :clearable="false" dir="rtl"
               :options="['1', '2', '3', '4', '5 ', '6', '7', '8', '9', '10']" v-model="numPay">
             </v-select>

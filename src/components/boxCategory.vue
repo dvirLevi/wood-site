@@ -29,6 +29,16 @@
 
 <style scoped>
 .col-box {
-  min-height: 700px;
+  height: 700px;
 }
+
+ @media (max-width: 767.98px) {
+.col-box {
+  height: 340px;
+}
+
+.col-box h2 {
+  font-size: 25px;
+}
+ }
 </style>

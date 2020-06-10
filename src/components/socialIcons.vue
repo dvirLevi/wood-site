@@ -16,8 +16,15 @@
 </script>
 
 <style scoped>
-.social-icons i{
-margin: 10px;
-font-size: 25px;
-}
+  .social-icons i {
+    margin: 10px;
+    font-size: 25px;
+  }
+
+  @media (max-width: 767.98px) {
+    .social-icons i {
+      margin: 5px;
+      font-size: 21px;
+    }
+  }
 </style>

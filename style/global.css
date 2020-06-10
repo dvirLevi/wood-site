@@ -136,6 +136,14 @@ body {
   display: block;
 }
 
+.mobile-flex {
+  display: none;
+}
+
+.desktop-flex {
+  display: flex;
+}
+
 input,
 textarea {
   padding: 3px;
@@ -174,6 +182,14 @@ a:active {
   }
 
   .desktop {
+    display: none;
+  }
+
+  .mobile-flex {
+    display: flex;
+  }
+
+  .desktop-flex {
     display: none;
   }
 
