@@ -1,7 +1,7 @@
 <template>
-  <div class="center cart">
+  <router-link to="/beforePay" class="center cart">
     <p class="m-0 c-p">עגלת קניות <span>{{inCart.length}}</span></p>
-  </div>
+  </router-link>
 </template>
 
 <script>
