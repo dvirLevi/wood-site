@@ -1,21 +1,21 @@
 <template>
-  <div class="row row-toolbar border-bottom">
+  <nav class="row row-toolbar border-bottom">
     <div class="col-4 center-right pr-md-5 pr-3">
       <Hamburger @openClose="openCloseMenu = !openCloseMenu" :openCloseMenu="openCloseMenu" />
       <menus v-if="openCloseMenu" @openClose="openCloseMenu = !openCloseMenu"/>
     </div>
-    <div class="col-md-4 center desktop-flex">
-      <h1 class="m-4">לוגו</h1>
+    <div class="col-md-4 center desktop-flex logo">
+      <img src="@/assets/logo.png" alt="">
     </div>
     <div class="col-md-4 col-8 center-left">
         <socialIcons />
         <div class="border m-3"></div>
         <cart />
     </div>
-    <div class="col-md-4 center mobile-flex border-top">
-      <h1 class="m-2">לוגו</h1>
+    <div class="col-md-4 center mobile-flex border-top logo">
+      <img src="@/assets/logo.png" alt="">
     </div>
-  </div>
+  </nav>
 </template>
 
 <script>
@@ -50,5 +50,15 @@
 }
 .border {
   height: 30px;
+}
+
+.logo img {
+  width: 100px;
+}
+
+@media (max-width: 767.98px) {
+  .logo img {
+  width: 60px;
+}
 }
 </style>
