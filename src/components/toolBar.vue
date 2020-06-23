@@ -2,18 +2,22 @@
   <nav class="row row-toolbar border-bottom">
     <div class="col-4 center-right pr-md-5 pr-3">
       <Hamburger @openClose="openCloseMenu = !openCloseMenu" :openCloseMenu="openCloseMenu" />
-      <menus v-if="openCloseMenu" @openClose="openCloseMenu = !openCloseMenu"/>
+      <menus v-if="openCloseMenu" @openClose="openCloseMenu = !openCloseMenu" />
     </div>
     <div class="col-md-4 center desktop-flex logo">
-      <img src="@/assets/logo.png" alt="">
+      <router-link to="/">
+        <img src="@/assets/logo.png" alt="">
+      </router-link>
     </div>
     <div class="col-md-4 col-8 center-left">
-        <socialIcons />
-        <div class="border m-3"></div>
-        <cart />
+      <socialIcons />
+      <div class="border m-3"></div>
+      <cart />
     </div>
     <div class="col-md-4 center mobile-flex border-top logo">
-      <img src="@/assets/logo.png" alt="">
+      <router-link to="/">
+        <img src="@/assets/logo.png" alt="">
+      </router-link>
     </div>
   </nav>
 </template>
@@ -42,23 +46,24 @@
 </script>
 
 <style scoped>
-.row-toolbar {
-  position: sticky;
-  top: 0;
-  background-color: #fff;
-  z-index: 100;
-}
-.border {
-  height: 30px;
-}
+  .row-toolbar {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 100;
+  }
 
-.logo img {
-  width: 100px;
-}
+  .border {
+    height: 30px;
+  }
 
-@media (max-width: 767.98px) {
   .logo img {
-  width: 60px;
-}
-}
+    width: 100px;
+  }
+
+  @media (max-width: 767.98px) {
+    .logo img {
+      width: 60px;
+    }
+  }
 </style>
