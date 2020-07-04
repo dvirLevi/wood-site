@@ -21,15 +21,15 @@
     data() {
       return {
         gallery: [{
-            img: require("@/assets/IMG_1194.jpg"),
+            img: require("@/assets/IMG_11945.jpg"),
             id: 1
           },
           {
-            img: require("@/assets/IMG_1199.jpg"),
+            img: require("@/assets/IMG_11999.jpg"),
             id: 2
           },
           {
-            img: require("@/assets/IMG_1241.jpg"),
+            img: require("@/assets/IMG_12411.jpg"),
             id: 3
           },
           {
