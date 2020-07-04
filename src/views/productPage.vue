@@ -6,10 +6,8 @@
           <h1 class="text-center">{{product.name}}</h1>
         </div>
         <div class="col-md-7 mobile-flex">
-        <div class="w-100 img-cover img-product mt-md-0 mt-5" :style="{backgroundImage: `url(${product.img})`}">
-
+          <imgOfProduct :imgs="product.img" />
         </div>
-      </div>
         <div class="w-100 center mt-5 mb-5">
           <h5>₪{{product.price}}</h5>
         </div>
@@ -28,9 +26,7 @@
         </div>
       </div>
       <div class="col-md-7 desktop-flex">
-        <div class="w-100 img-cover img-product mt-md-0 mt-5" :style="{backgroundImage: `url(${product.img})`}">
-
-        </div>
+        <imgOfProduct :imgs="product.img" />
       </div>
     </div>
     <div class="row row-description  mt-md-5 mt-0 border-bottom pb-5 pt-5">
@@ -45,17 +41,19 @@
   // @ is an alias to /src
   import counter from '@/components/counter.vue'
   import openCart from '@/components/openCart.vue'
+  import imgOfProduct from '@/components/imgOfProduct.vue'
 
   export default {
     name: 'productPage',
     components: {
       counter,
-      openCart
+      openCart,
+      imgOfProduct
     },
     data() {
       return {
-amount: 1,
-openCart: false
+        amount: 1,
+        openCart: false
       }
     },
     methods: {
@@ -115,9 +113,9 @@ openCart: false
     border-left: none;
   }
 
-    @media (max-width: 767.98px) {
-  .row-description h4 {
-    border-left: none;
-  }
+  @media (max-width: 767.98px) {
+    .row-description h4 {
+      border-left: none;
+    }
   }
 </style>

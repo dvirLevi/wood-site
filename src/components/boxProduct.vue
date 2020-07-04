@@ -1,12 +1,11 @@
 <template>
   <router-link :to="'/productPage/'+item.id" class="box-product p-2 center">
-    <div class="w-100 img-cover img-product" :style="{backgroundImage: `url(${item.img})`}">
+    <div class="w-100 img-cover img-product" :style="{backgroundImage: `url(${item.img[0]})`}">
 
     </div>
     <h5 class="w-100 text-center pt-3 pb-3 m-0">{{item.name}}</h5>
     <div class="border w-25"></div>
     <h6 class="w-100 text-center pt-3 pb-3 m-0">₪{{item.price}}</h6>
-
   </router-link>
 </template>
 

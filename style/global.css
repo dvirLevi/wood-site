@@ -4,13 +4,13 @@
 html,
 body {
   font-family: 'Heebo', sans-serif;
-  color: #444;
+  color: var(--main-text-color);
   text-align: right;
 }
 
-/* :root {
-  --main-color: #DF262D;
-} */
+:root {
+  --main-text-color: #444;
+}
 
 .center {
   display: flex;

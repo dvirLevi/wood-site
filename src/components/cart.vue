@@ -1,6 +1,6 @@
 <template>
   <router-link to="/beforePay" class="center cart">
-    <p class="m-0 c-p">עגלת קניות <span>{{inCart.length}}</span></p>
+  <i class="fas fa-shopping-cart m-2"></i><span>{{inCart.length}}</span>
   </router-link>
 </template>
 
@@ -19,5 +19,7 @@
 </script>
 
 <style scoped>
-
+i {
+  font-size: 22px;
+}
 </style>

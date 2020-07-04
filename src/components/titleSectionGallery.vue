@@ -21,16 +21,24 @@
     data() {
       return {
         gallery: [{
-            img: "https://cdn.pixabay.com/photo/2017/05/19/06/22/desktop-2325627_960_720.jpg",
+            img: require("@/assets/IMG_1194.jpg"),
             id: 1
           },
           {
-            img: "https://cdn.pixabay.com/photo/2015/05/31/15/18/technology-792180_960_720.jpg",
+            img: require("@/assets/IMG_1199.jpg"),
             id: 2
           },
           {
-            img: "https://cdn.pixabay.com/photo/2017/12/10/15/16/white-horse-3010129_960_720.jpg",
+            img: require("@/assets/IMG_1241.jpg"),
             id: 3
+          },
+          {
+            img: require("@/assets/IMG_1330.jpg"),
+            id: 4
+          },
+          {
+            img: require("@/assets/IMG_1238.jpg"),
+            id: 5
           },
         ],
         indexOfImg: 0,
@@ -63,24 +71,28 @@
 
   .row-title .text {
     width: 30%;
-  }
- @media (max-width: 767.98px) {
-     .row-title {
-    height: 340px;
-  }
-
-   .row-title .text {
-    width: 70%;
+    margin-left: 40%;
     background-color: rgba(255, 255, 255, 0.582);
-    /* color: #fff; */
   }
 
-   .row-title .text h1{
-    font-size: 23px;
+  @media (max-width: 767.98px) {
+    .row-title {
+      height: 340px;
+    }
+
+    .row-title .text {
+      width: 70%;
+      
+      margin-left: 0%;
+      /* color: #fff; */
+    }
+
+    .row-title .text h1 {
+      font-size: 23px;
+    }
+
+    .row-title .text h4 {
+      font-size: 18px;
+    }
   }
-  .row-title .text h4{
-    font-size: 18px;
-  }
- }
-     
 </style>

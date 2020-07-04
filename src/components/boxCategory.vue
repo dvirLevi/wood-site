@@ -31,6 +31,9 @@
 .col-box {
   height: 700px;
 }
+ .col-box h2 {
+    text-shadow: 2px 2px 4px #ffffffd1;
+ }
 
  @media (max-width: 767.98px) {
 .col-box {
