@@ -71,7 +71,7 @@
   .row-title .text {
     width: 30%;
     margin-left: 40%;
-    background-color: rgba(255, 255, 255, 0.582);
+    background-color: #ffffffa6;
   }
 
   @media (max-width: 767.98px) {
@@ -80,10 +80,8 @@
     }
 
     .row-title .text {
-      width: 70%;
-      
+      width: 85%;
       margin-left: 0%;
-      /* color: #fff; */
     }
 
     .row-title .text h1 {

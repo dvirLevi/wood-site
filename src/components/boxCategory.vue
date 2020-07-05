@@ -32,7 +32,8 @@
   height: 700px;
 }
  .col-box h2 {
-    text-shadow: 2px 2px 4px #ffffffd1;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000000d1;
  }
 
  @media (max-width: 767.98px) {
@@ -41,7 +42,7 @@
 }
 
 .col-box h2 {
-  font-size: 25px;
+  font-size: 34px;
 }
  }
 </style>
