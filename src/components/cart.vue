@@ -1,6 +1,6 @@
 <template>
   <router-link to="/beforePay" class="center cart">
-  <i class="fas fa-shopping-cart m-2"></i><span>{{inCart.length}}</span>
+  <i class="las la-shopping-cart"></i><span>{{inCart.length}}</span>
   </router-link>
 </template>
 
@@ -20,6 +20,6 @@
 
 <style scoped>
 i {
-  font-size: 22px;
+  font-size: 40px;
 }
 </style>

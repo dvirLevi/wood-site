@@ -1,6 +1,6 @@
 <template>
   <div class="w-100 center-top product-in-cart p-4">
-    <div class="img-cover img-product" :style="{backgroundImage: `url(${item.img})`}">
+    <div class="img-cover img-product" :style="{backgroundImage: `url(${item.img[0]})`}">
     </div>
     <div class="text p-2">
       <h4>{{item.name}}</h4>

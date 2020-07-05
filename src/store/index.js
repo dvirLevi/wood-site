@@ -15,7 +15,7 @@ export default new Vuex.Store({
       },
       {
         name: "חנות",
-        link: "/store",
+        link: "/store/all",
         id: 2,
       },
     ],
@@ -36,6 +36,7 @@ export default new Vuex.Store({
       price: 1490,
       previousPrice: 0,
       amount: 0,
+      category: "regular",
       id: 1
     },
       {
@@ -55,6 +56,7 @@ export default new Vuex.Store({
         price: 1490,
         previousPrice: 0,
         amount: 0,
+        category: "special",
         id: 2
       },
       {
@@ -74,6 +76,7 @@ export default new Vuex.Store({
         price: 1490,
         previousPrice: 0,
         amount: 0,
+        category: "special",
         id: 3
       },
       {
@@ -93,6 +96,7 @@ export default new Vuex.Store({
         price: 1490,
         previousPrice: 0,
         amount: 0,
+        category: "regular",
         id: 4
       },
       {
@@ -112,6 +116,7 @@ export default new Vuex.Store({
         price: 1490,
         previousPrice: 0,
         amount: 0,
+        category: "regular",
         id: 5
       },
       {
@@ -131,6 +136,7 @@ export default new Vuex.Store({
         price: 1490,
         previousPrice: 0,
         amount: 0,
+        category: "regular",
         id: 6
       },
     ]

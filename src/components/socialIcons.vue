@@ -1,8 +1,7 @@
 <template>
   <div class="center social-icons">
-    <i class="fab fa-facebook-f"></i>
-    <i class="fab fa-youtube"></i>
-    <i class="fab fa-instagram"></i>
+    <i class="lab la-facebook-f"></i>
+    <i class="lab la-instagram"></i>
   </div>
 </template>
 
@@ -18,13 +17,22 @@
 <style scoped>
   .social-icons i {
     margin: 10px;
-    font-size: 25px;
+    cursor: pointer;
   }
+
+  .social-icons .la-instagram {
+    font-size: 35px;
+  }
+   .social-icons .la-facebook-f {
+     font-size: 25px;
+  }
+
+
 
   @media (max-width: 767.98px) {
     .social-icons i {
       margin: 5px;
-      font-size: 21px;
+      /* font-size: 21px; */
     }
   }
 </style>

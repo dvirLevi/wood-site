@@ -52,5 +52,9 @@
     .box-product {
       width: calc(100% / 2 + 0px);
     }
+
+    .box-product h5 {
+      font-size: 15px;
+    }
   }
 </style>

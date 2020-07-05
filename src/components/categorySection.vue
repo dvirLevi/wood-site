@@ -17,10 +17,12 @@
         category: [
           {
             img: require("@/assets/IMG_1208.jpg"),
+            path: "regular",
             text: "אדניות רגילות"
           },
            {
             img: require("@/assets/IMG_1258.jpg"),
+            path: "special",
             text: "אדניות מיוחדות"
           },
         ]

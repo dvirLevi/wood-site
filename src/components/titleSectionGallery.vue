@@ -4,7 +4,7 @@
       <div class="text p-3">
         <h1> מוצרים אדניות אדניות אדניות אדניות אדניות אדניות אדניות </h1>
         <h4> מוצרים אדניות אדניות אדניות אדניות אדניות אדניות אדניות </h4>
-        <ButtonLink text="המשך לחנות" link="/store/" class="mt-4" />
+        <ButtonLink text="המשך לחנות" link="/store/all" class="mt-4" />
       </div>
     </div>
   </div>
@@ -21,23 +21,23 @@
     data() {
       return {
         gallery: [{
-            img: require("@/assets/IMG_11945.jpg"),
+            img: require("@/assets/IMG_1194S.jpg"),
             id: 1
           },
           {
-            img: require("@/assets/IMG_11999.jpg"),
+            img: require("@/assets/IMG_1199S.jpg"),
             id: 2
           },
           {
-            img: require("@/assets/IMG_12411.jpg"),
+            img: require("@/assets/IMG_1241S.jpg"),
             id: 3
           },
           {
-            img: require("@/assets/IMG_1330.jpg"),
+            img: require("@/assets/IMG_1330S.jpg"),
             id: 4
           },
           {
-            img: require("@/assets/IMG_1238.jpg"),
+            img: require("@/assets/IMG_1238S.jpg"),
             id: 5
           },
         ],
@@ -50,12 +50,11 @@
     methods: {
       changeImg() {
         setInterval(() => {
-          console.log("asd")
           this.indexOfImg++
           if (this.indexOfImg === this.gallery.length) {
             this.indexOfImg = 0
           }
-        }, 4000)
+        }, 6000)
       }
     }
 
