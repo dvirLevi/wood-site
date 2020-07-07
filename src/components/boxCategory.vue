@@ -1,8 +1,8 @@
 <template>
     <div class="col-md-6 mt-md-4 mb-md-4  mt-2 mb-2 pr-md-3 pl-md-3 pr-0 pl-0" >
       <div class="w-100 col-box img-cover center-right-bottom" :style="{backgroundImage: `url(${item.img})`}">
-        <div class="m-5 c-p">
-          <router-link :to="'store/'+ item.path" tag="h2">{{item.text}} <i class="las la-arrow-left"></i></router-link>
+        <div class="m-md-5 m-3 c-p">
+          <router-link :to="'store/'+ item.path" tag="h2" class="p-2">{{item.text}} <i class="las la-arrow-left"></i></router-link>
         </div>
       </div>
     </div>
@@ -32,8 +32,9 @@
   height: 700px;
 }
  .col-box h2 {
-    color: #fff;
-    text-shadow: 2px 2px 4px #000000d1;
+    background-color: #ffffffbf;
+    font-weight: 800;
+    /* text-shadow: 2px 2px 4px #000000d1; */
  }
 
  @media (max-width: 767.98px) {
@@ -42,7 +43,7 @@
 }
 
 .col-box h2 {
-  font-size: 34px;
+  font-size: 30px;
 }
  }
 </style>

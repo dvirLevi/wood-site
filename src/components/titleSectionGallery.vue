@@ -1,22 +1,18 @@
 <template>
-  <div class="row row-title img-cover" :style="{backgroundImage: `url(${gallery[indexOfImg].img})`}">
-    <div class="col center">
-      <div class="text p-3">
-        <h1> להפוך את המרפסת בשיינקין לכפר קטן ומטריף!</h1>
-        <h4>שמריהו הוא מותג אדניות עץ ישראלי. אנחנו בונים אותן בקפדנות עם חומרי הגלם האיכותיים ביותר, ושולחים אותן במארז מעוצב עד לביתכם</h4>
-        <ButtonLink text="המשך לחנות" link="/store/all" class="mt-4" />
-      </div>
+  <div class="row">
+    <div class="col">
+      <boxGallery :items="gallery" :item="correntImg" :key="correntImg.id" @sendIndex="sendIndex" />
     </div>
   </div>
 </template>
 
 <script>
-  // import ButtonLink from '@/components/ButtonLink.vue'
+  import boxGallery from '@/components/boxGallery.vue'
 
   export default {
     name: 'titleSectionGallery',
     components: {
-      // ButtonLink
+      boxGallery
     },
     data() {
       return {
@@ -55,6 +51,15 @@
             this.indexOfImg = 0
           }
         }, 6000)
+      },
+      sendIndex(index) {
+        this.indexOfImg = index
+      }
+
+    },
+    computed: {
+      correntImg() {
+        return this.gallery[this.indexOfImg]
       }
     }
 
@@ -64,32 +69,9 @@
 </script>
 
 <style scoped>
-  .row-title {
-    height: 750px;
-  }
-
-  .row-title .text {
-    width: 30%;
-    margin-left: 40%;
-    background-color: #ffffffa6;
-  }
+  
 
   @media (max-width: 767.98px) {
-    .row-title {
-      height: 340px;
-    }
-
-    .row-title .text {
-      width: 85%;
-      margin-left: 0%;
-    }
-
-    .row-title .text h1 {
-      font-size: 23px;
-    }
-
-    .row-title .text h4 {
-      font-size: 18px;
-    }
+   
   }
 </style>
