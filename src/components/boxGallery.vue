@@ -5,8 +5,10 @@
     </div>
     <div class="col center">
       <div class="text p-3">
-        <h1> להפוך את המרפסת בשיינקין לכפר קטן ומטריף! <span v-if="mobOrDesk" @click="$emit('showText')"><i class="las la-angle-down"></i></span></h1>
-        <h4 v-if="ifShowText">שמריהו הוא מותג אדניות עץ ישראלי. אנחנו בונים אותן בקפדנות עם חומרי הגלם האיכותיים ביותר, ושולחים אותן במארז
+        <h1 @click="showHideText"> להפוך את המרפסת בשיינקין לכפר קטן ומטריף! <span v-if="mobOrDesk"><i
+              class="las la-angle-down"></i></span></h1>
+        <h4 v-if="ifShowText">שמריהו הוא מותג אדניות עץ ישראלי. אנחנו בונים אותן בקפדנות עם חומרי הגלם האיכותיים ביותר,
+          ושולחים אותן במארז
           מעוצב עד לביתכם</h4>
         <ButtonLink text="המשך לחנות" link="/store/all" class="mt-4" />
       </div>
@@ -39,7 +41,14 @@
       }
     },
     mounted() {
-      
+
+    },
+    methods: {
+      showHideText() {
+        if (this.mobOrDesk) {
+          this.$emit('showText')
+        }
+      }
     },
     computed: {
       mobOrDesk() {

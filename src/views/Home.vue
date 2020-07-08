@@ -15,11 +15,11 @@
         <div class="col">
           <div class="container">
             <div class="row">
-              <div class="col center-right">
-                <h2>שאלות ותשובות:</h2>
+              <div class="col center-right" @click="showHideText">
+                <h2>שאלות ותשובות: <span v-if="mobOrDesk"><i class="las la-angle-down"></i></span></h2>
               </div>
             </div>
-            <div class="row">
+            <div class="row" v-if="ifShowQues">
               <div class="col-md-6 mt-2" v-for="item in questions" :key="item.id">
                 <div class="w-100 center-right">
                   <h4>{{item.question}}</h4>
@@ -49,6 +49,7 @@
     },
     data() {
       return {
+        ifShowQues: true,
         icons: [{
             icon: "lab la-pagelines",
             text: "עץ טבעי מלא",
@@ -75,8 +76,7 @@
             id: 5
           },
         ],
-        questions: [
-          {
+        questions: [{
             question: "האם האדניות עשויות מעץ מלא?",
             answer: "ב-ר-ו-ר! כל האדניות שלנו עשויות עץ אורן פיני מלא ומחוטא. ניתן להזמין גם עצים מיוחדים נוספים. שלחו לנו הודעת וואטספ ונשוב אליכם.",
             id: 1
@@ -119,6 +119,23 @@
         ]
       }
     },
+    mounted() {
+      if (this.mobOrDesk) {
+        this.ifShowQues = false
+      }
+    },
+    methods: {
+      showHideText() {
+        if (this.mobOrDesk) {
+          this.ifShowQues = !this.ifShowQues
+        }
+      }
+    },
+    computed: {
+      mobOrDesk() {
+        return this.$store.getters.mobOrDesk
+      }
+    }
   }
 </script>
 
