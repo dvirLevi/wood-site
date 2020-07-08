@@ -17,12 +17,12 @@
         category: [
           {
             img: require("@/assets/IMG_1208.jpg"),
-            path: "regular",
+            path: "1",
             text: "אדניות"
           },
            {
             img: require("@/assets/IMG_1279.jpg"),
-            path: "special",
+            path: "2",
             text: "אביזרים"
           },
         ]
