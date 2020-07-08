@@ -24,9 +24,7 @@
     },
     computed: {
       products() {
-        console.log('qwe')
         if (this.$route.params.id === "1") {
-          console.log("asd")
           return this.$store.state.products.filter((val) => {
             return val.category === "1"
           })

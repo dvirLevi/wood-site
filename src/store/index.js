@@ -5,6 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    windowWidth: "",
     clientDatdlis: {},
     messengerPrice: 40,
     ifMessenger: true,
@@ -202,6 +203,12 @@ export default new Vuex.Store({
       }
       return Payable
     },
+    mobOrDesk: (state) => {
+      if (state.windowWidth > 767) {
+        return false;
+      }
+      return true;
+    },
     
    
   },
@@ -215,6 +222,9 @@ export default new Vuex.Store({
     },
     setIfMessenger(state) {
       state.ifMessenger = !state.ifMessenger
+    },
+    setWindowWidth(state, windowWidth) {
+      state.windowWidth = windowWidth;
     },
   },
   actions: {},

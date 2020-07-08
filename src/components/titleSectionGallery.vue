@@ -1,7 +1,7 @@
 <template>
   <div class="row">
     <div class="col">
-      <boxGallery :items="gallery" :item="correntImg" :key="correntImg.id" @sendIndex="sendIndex" />
+      <boxGallery :items="gallery" :item="correntImg" :key="correntImg.id" @sendIndex="sendIndex" :ifShowText="ifShowText" @showText="ifShowText = !ifShowText"  />
     </div>
   </div>
 </template>
@@ -38,10 +38,14 @@
           // },
         ],
         indexOfImg: 0,
+        ifShowText: true
       }
     },
     mounted() {
-      this.changeImg()
+      this.changeImg();
+      if (this.mobOrDesk) {
+        this.ifShowText = false
+      }
     },
     methods: {
       changeImg() {
@@ -60,18 +64,14 @@
     computed: {
       correntImg() {
         return this.gallery[this.indexOfImg]
+      },
+       mobOrDesk() {
+        return this.$store.getters.mobOrDesk
       }
-    }
-
-
-
+    },
   }
 </script>
 
 <style scoped>
-  
-
-  @media (max-width: 767.98px) {
-   
-  }
+  @media (max-width: 767.98px) {}
 </style>

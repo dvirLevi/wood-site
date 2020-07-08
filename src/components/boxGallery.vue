@@ -5,14 +5,15 @@
     </div>
     <div class="col center">
       <div class="text p-3">
-        <h1> להפוך את המרפסת בשיינקין לכפר קטן ומטריף!</h1>
-        <h4>שמריהו הוא מותג אדניות עץ ישראלי. אנחנו בונים אותן בקפדנות עם חומרי הגלם האיכותיים ביותר, ושולחים אותן במארז
+        <h1> להפוך את המרפסת בשיינקין לכפר קטן ומטריף! <span v-if="mobOrDesk" @click="$emit('showText')"><i class="las la-angle-down"></i></span></h1>
+        <h4 v-if="ifShowText">שמריהו הוא מותג אדניות עץ ישראלי. אנחנו בונים אותן בקפדנות עם חומרי הגלם האיכותיים ביותר, ושולחים אותן במארז
           מעוצב עד לביתכם</h4>
         <ButtonLink text="המשך לחנות" link="/store/all" class="mt-4" />
       </div>
     </div>
     <div class="wrap-points center mb-1">
-      <div class="dotes c-p" v-for="(dote, index) in items" :key="dote.id" :class="{'dotes-bac': item.id === dote.id }" @click="$emit('sendIndex', index)">
+      <div class="dotes c-p" v-for="(dote, index) in items" :key="dote.id" :class="{'dotes-bac': item.id === dote.id }"
+        @click="$emit('sendIndex', index)">
 
       </div>
     </div>
@@ -29,11 +30,22 @@
     },
     props: {
       item: Object,
-      items: Array
+      items: Array,
+      ifShowText: Boolean
     },
     data() {
-      return {}
+      return {
+        // ifShowText: true
+      }
     },
+    mounted() {
+      
+    },
+    computed: {
+      mobOrDesk() {
+        return this.$store.getters.mobOrDesk
+      }
+    }
   }
 </script>
 
@@ -91,7 +103,7 @@
 
   @media (max-width: 767.98px) {
     .row-title {
-      min-height: 340px;
+      min-height: 400px;
     }
 
     .row-title .text {

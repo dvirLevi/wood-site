@@ -16,6 +16,11 @@
     components: {
       toolBar,
       Footer
+    },
+    created() {
+      let windowWidth = window.innerWidth;
+      console.log(windowWidth)
+      this.$store.commit('setWindowWidth', windowWidth);
     }
   }
 </script>

@@ -1,10 +1,11 @@
 <template>
   <div class="w-100 center">
-    <div class="w-100 img-cover img-product mt-md-0 mt-5" :style="{backgroundImage: `url(${correntImg})`}">
+    <div class="w-100 img-cover img-product mt-md-0 mt-5 c-p" :style="{backgroundImage: `url(${correntImg})`}" @click="nextImg">
 
     </div>
     <div class="center mt-2">
-      <div class="dotes c-p" :class="{'dotes-bac': imgIndex === index }" v-for="(dote, index) in imgs" :key="dote" @click="imgIndex = index">
+      <div class="dotes c-p" :class="{'dotes-bac': imgIndex === index }" v-for="(dote, index) in imgs" :key="dote"
+        @click="imgIndex = index">
 
       </div>
     </div>
@@ -25,12 +26,19 @@
       }
     },
     methods: {
-
+      nextImg() {
+        if (this.imgIndex < this.imgs.length - 1) {
+          this.imgIndex++
+        } else {
+          this.imgIndex = 0
+        }
+      }
     },
     computed: {
       correntImg() {
         return this.imgs[this.imgIndex]
-      }
+      },
+
     }
   }
 </script>
@@ -49,7 +57,7 @@
   }
 
   .dotes-bac {
-   background-color: var(--main-text-color);
+    background-color: var(--main-text-color);
   }
 
 
