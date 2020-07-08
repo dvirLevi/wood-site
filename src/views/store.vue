@@ -25,14 +25,14 @@
     computed: {
       products() {
         console.log('qwe')
-        if (this.$route.params.id === "regular") {
+        if (this.$route.params.id === "1") {
           console.log("asd")
           return this.$store.state.products.filter((val) => {
-            return val.category === "regular"
+            return val.category === "1"
           })
-        } else if (this.$route.params.id === "special") {
+        } else if (this.$route.params.id === "2") {
           return this.$store.state.products.filter((val) => {
-            return val.category === "special"
+            return val.category === "2"
           })
         }
         return this.$store.state.products;
