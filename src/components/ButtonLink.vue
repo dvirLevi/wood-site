@@ -21,7 +21,7 @@
 <style scoped>
   button {
     border: none;
-    background-color: #2f2e2e;
+    background-color: var(--main-text-color);
     color: #ffffff;
     padding: 15px 25px;
     outline: none;

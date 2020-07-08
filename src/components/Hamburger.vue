@@ -33,7 +33,7 @@
     .bar3 {
       width: 35px;
       height: 5px;
-      background-color: #000000;
+      background-color: var(--main-text-color);;
       margin: 3px 0;
       transition: 0.4s;
     }

@@ -20,7 +20,7 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-md-6 mt-4" v-for="item in questions" :key="item.id">
+              <div class="col-md-6 mt-2" v-for="item in questions" :key="item.id">
                 <div class="w-100 center-right">
                   <h4>{{item.question}}</h4>
                 </div>
@@ -124,7 +124,7 @@
 
 <style scoped>
   .row-icons {
-    background-color: #2f2e2e;
+    background-color: var(--main-text-color);
   }
 
   .row-icons img {

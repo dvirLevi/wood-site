@@ -35,7 +35,7 @@
 
 <style>
   footer {
-    background-color: #2f2e2e;
+    background-color: var(--main-text-color);;
     min-height: 100px
   }
 

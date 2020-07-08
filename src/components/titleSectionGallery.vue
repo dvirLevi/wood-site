@@ -17,25 +17,25 @@
     data() {
       return {
         gallery: [{
-            img: require("@/assets/IMG_1194S.jpg"),
+            img: require("@/assets/IMG_1242.jpg"),
             id: 1
           },
           {
-            img: require("@/assets/IMG_1199S.jpg"),
+            img: require("@/assets/IMG_1266.jpg"),
             id: 2
           },
           {
-            img: require("@/assets/IMG_1241S.jpg"),
+            img: require("@/assets/IMG_1243.jpg"),
             id: 3
           },
           {
-            img: require("@/assets/IMG_1330S.jpg"),
+            img: require("@/assets/IMG_1274.jpg"),
             id: 4
           },
-          {
-            img: require("@/assets/IMG_1238S.jpg"),
-            id: 5
-          },
+          // {
+          //   img: require("@/assets/IMG_1238S.jpg"),
+          //   id: 5
+          // },
         ],
         indexOfImg: 0,
       }

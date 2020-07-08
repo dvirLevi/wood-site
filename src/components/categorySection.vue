@@ -18,12 +18,12 @@
           {
             img: require("@/assets/IMG_1208.jpg"),
             path: "regular",
-            text: "אדניות רגילות"
+            text: "אדניות"
           },
            {
-            img: require("@/assets/IMG_1258.jpg"),
+            img: require("@/assets/IMG_1279.jpg"),
             path: "special",
-            text: "אדניות מיוחדות"
+            text: "אביזרים"
           },
         ]
       }
