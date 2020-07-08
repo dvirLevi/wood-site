@@ -103,7 +103,7 @@
 
   @media (max-width: 767.98px) {
     .row-title {
-      min-height: 400px;
+      min-height: 420px;
     }
 
     .row-title .text {
