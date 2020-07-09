@@ -49,13 +49,14 @@
 </script>
 
 <style scoped>
-  .counter {
-    font-size: 20px;
+      .counter {
+    font-size: 15px;
   }
-
   .counter div {
-    padding: 0px 10px
+    padding: 0px 8px
   }
 
-  @media (max-width: 767.98px) {}
+  @media (max-width: 767.98px) {
+ 
+  }
 </style>

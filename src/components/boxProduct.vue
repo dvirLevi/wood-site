@@ -30,7 +30,7 @@
 
 <style scoped>
   .box-product {
-    width: calc(100% / 3 + 0px);
+    min-width: calc(100% / 3 + 0px);
   }
 
   .box-product .img-product {

@@ -1,10 +1,13 @@
 <template>
-  <div class="w-100 center-top product-in-cart p-4">
+  <div class="w-100 center-top product-in-cart p-md-4 p-2">
     <div class="img-cover img-product" :style="{backgroundImage: `url(${item.img[0]})`}">
     </div>
-    <div class="text p-2">
-      <h4>{{item.name}}</h4>
-      <h5>₪{{item.price}}</h5>
+    <div class="text pr-2 center-right">
+      <div class="w-100 center-right">
+        <h5 class="w-100">{{item.name}}</h5>
+        <h5>₪{{item.price}}</h5>
+      </div>
+
       <div class="w-100 center-left">
         <counter @customEvent="changeAmount" :passAmount="item.amount" />
       </div>
@@ -50,8 +53,8 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .product-in-cart .img-product {
-    padding-top: 30%;
-    width: 30%;
+    padding-top: 20%;
+    width: 20%;
   }
 
   .product-in-cart .text {
@@ -67,9 +70,21 @@
   .product-in-cart .text h5 {
     font-size: 18px;
     font-weight: 300;
-    ;
   }
 
 
-  @media (max-width: 767.98px) {}
+  @media (max-width: 767.98px) {
+    .product-in-cart .img-product {
+      padding-top: 20%;
+      width: 20%;
+    }
+
+    .product-in-cart .text h4 {
+      font-size: 18px;
+    }
+
+    .product-in-cart .text h5 {
+      font-size: 15px;
+    }
+  }
 </style>

@@ -34,6 +34,15 @@
       <h4 class="col-md-4">{{product.description2}}</h4>
       <h4 class="col-md-4">{{product.description3}}</h4>
     </div>
+    <div class="row mt-3">
+      <div class="col">
+        <h3>מוצרים נוספים שתאהב:</h3>
+        <slider>
+          <boxProduct v-for="item in products" :item="item" :key="item.id" />
+        </slider>
+      </div>
+    </div>
+
   </div>
 </template>
 
@@ -42,13 +51,18 @@
   import counter from '@/components/counter.vue'
   import openCart from '@/components/openCart.vue'
   import imgOfProduct from '@/components/imgOfProduct.vue'
+  import slider from '@/components/slider.vue'
+  import boxProduct from '@/components/boxProduct.vue'
+  import shuffle from '@/helpers/shuffle.js'
 
   export default {
     name: 'productPage',
     components: {
       counter,
       openCart,
-      imgOfProduct
+      imgOfProduct,
+      slider,
+      boxProduct
     },
     data() {
       return {
@@ -74,6 +88,12 @@
           return val.id.toString() === this.$route.params.id
         })
         return product[0];
+      },
+      products() {
+        let arr = this.$store.state.products.filter((val)=>{
+          return val.id.toString() !== this.$route.params.id
+        })
+        return shuffle(arr);
       }
     }
   }

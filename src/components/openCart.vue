@@ -5,15 +5,18 @@
     <div class="wrap-items center-column-between">
       <div class="w-100 title center">
         <h1 class="w-100 text-center">סל קניות</h1>
+      </div>
+      <div class="w-100 box-prod">
         <productInOpenCart v-for="item in inCart" :item="item" :key="item.id" />
+
       </div>
       <div class="w-100 ">
-        <div class="w-100 p-4">
+        <div class="w-100 p-md-4 p-2">
           <h3>סכום ביניים</h3>
           <h3>₪{{Payable}}</h3>
         </div>
-        <div class="w-100 border-top center p-4">
-          <ButtonLink text="מעבר לסל הקניות" link="/beforePay" class="h5" />
+        <div class="w-100 border-top p-md-4 p-2 center">
+          <ButtonLink text="מעבר לסל הקניות" link="/beforePay" class="h5 m-0" />
         </div>
       </div>
       <!-- <nuxt-link class="items-menu" :to="item.link" v-for="item in categories" :key="item.id">
@@ -133,14 +136,33 @@
     }
   }
 
+  .box-prod {
+    max-height: 590px;
+    overflow: auto;
+  }
+
 
   @media (max-width: 767.98px) {
+    .bac-menu .title h1 {
+      padding: 15px;
+      font-size: 21px;
+    }
+
     .wrap-items {
       width: 75%;
     }
 
     .items-menu {
       font-size: 18px;
+    }
+
+    .bac-menu h3 {
+      font-size: 21px;
+    }
+
+    .box-prod {
+      max-height: 424px;
+      overflow: auto;
     }
 
     /* .box-img {
