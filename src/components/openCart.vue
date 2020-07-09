@@ -5,11 +5,11 @@
     <div class="wrap-items center-column-between">
       <div class="w-100 title center">
         <h1 class="w-100 text-center">סל קניות</h1>
-      </div>
-      <div class="w-100 box-prod">
+        <div class="w-100 box-prod">
         <productInOpenCart v-for="item in inCart" :item="item" :key="item.id" />
-
       </div>
+      </div>
+      
       <div class="w-100 ">
         <div class="w-100 p-md-4 p-2">
           <h3>סכום ביניים</h3>
