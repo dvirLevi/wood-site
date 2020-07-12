@@ -20,29 +20,29 @@ export default new Vuex.Store({
         id: 2,
       },
     ],
-    products: [ {
-      name: "אדנית מסגרת",
-      img: [require("@/assets/IMG_1208.jpg"), require("@/assets/IMG_1209.jpg"), require("@/assets/IMG_1210.jpg"), require("@/assets/IMG_1230.jpg"), require("@/assets/IMG_1240.jpg"), require("@/assets/IMG_1263.jpg")],
-      description: `אדנית היא מכל לטיפוח צמחים המיועד להצבה על אדן חלון של בתים. בתוך אדנית מצע לגידול צמחים, בדרך כלל עפר מדושן,`,
-      description1: `אדנית היא מכל לטיפוח צמחים המיועד להצבה על אדן חלון של בתים. בתוך אדנית מצע לגידול צמחים, בדרך כלל עפר מדושן, ובו נזרעים או נשתלים צמחים פרחוניים. נועדה לנוי ולקישוט הבית, מבחוץ ומבפנים.
+    products: [{
+        name: "אדנית מסגרת",
+        img: [require("@/assets/IMG_1208.jpg"), require("@/assets/IMG_1209.jpg"), require("@/assets/IMG_1210.jpg"), require("@/assets/IMG_1230.jpg"), require("@/assets/IMG_1240.jpg"), require("@/assets/IMG_1263.jpg")],
+        description: `אדנית היא מכל לטיפוח צמחים המיועד להצבה על אדן חלון של בתים. בתוך אדנית מצע לגידול צמחים, בדרך כלל עפר מדושן,`,
+        description1: `אדנית היא מכל לטיפוח צמחים המיועד להצבה על אדן חלון של בתים. בתוך אדנית מצע לגידול צמחים, בדרך כלל עפר מדושן, ובו נזרעים או נשתלים צמחים פרחוניים. נועדה לנוי ולקישוט הבית, מבחוץ ומבפנים.
 
       אדניות מיוצרות ממגוון חומרים: עץ, פלסטיק ואחרים.`,
-      description2: `אדנית היא מכל לטיפוח צמחים המיועד להצבה על אדן חלון של בתים. בתוך אדנית מצע לגידול צמחים, בדרך כלל עפר מדושן, ובו נזרעים או נשתלים צמחים פרחוניים. נועדה לנוי ולקישוט הבית, מבחוץ ומבפנים.
+        description2: `אדנית היא מכל לטיפוח צמחים המיועד להצבה על אדן חלון של בתים. בתוך אדנית מצע לגידול צמחים, בדרך כלל עפר מדושן, ובו נזרעים או נשתלים צמחים פרחוניים. נועדה לנוי ולקישוט הבית, מבחוץ ומבפנים.
 
       אדניות מיוצרות ממגוון חומרים: עץ, פלסטיק ואחרים.`,
-      description3: `אדנית היא מכל לטיפוח צמחים המיועד להצבה על אדן חלון של בתים. בתוך אדנית מצע לגידול צמחים, בדרך כלל עפר מדושן, ובו נזרעים או נשתלים צמחים פרחוניים. נועדה לנוי ולקישוט הבית, מבחוץ ומבפנים.
+        description3: `אדנית היא מכל לטיפוח צמחים המיועד להצבה על אדן חלון של בתים. בתוך אדנית מצע לגידול צמחים, בדרך כלל עפר מדושן, ובו נזרעים או נשתלים צמחים פרחוניים. נועדה לנוי ולקישוט הבית, מבחוץ ומבפנים.
 
       אדניות מיוצרות ממגוון חומרים: עץ, פלסטיק ואחרים.`,
-      addCart: false,
-      price: 1490,
-      previousPrice: 0,
-      amount: 0,
-      category: "1",
-      id: 1
-    },
+        addCart: false,
+        price: 1490,
+        previousPrice: 0,
+        amount: 0,
+        category: "1",
+        id: 1
+      },
       {
         name: "תכלת",
-        img: [require("@/assets/IMG_1188.jpg"), require("@/assets/IMG_1220.jpg"),  require("@/assets/IMG_1195.jpg")],
+        img: [require("@/assets/IMG_1188.jpg"), require("@/assets/IMG_1220.jpg"), require("@/assets/IMG_1195.jpg")],
         description: `אדנית היא מכל לטיפוח צמחים המיועד להצבה על אדן חלון של בתים. בתוך אדנית מצע לגידול צמחים, בדרך כלל עפר מדושן,`,
         description1: `אדנית היא מכל לטיפוח צמחים המיועד להצבה על אדן חלון של בתים. בתוך אדנית מצע לגידול צמחים, בדרך כלל עפר מדושן, ובו נזרעים או נשתלים צמחים פרחוניים. נועדה לנוי ולקישוט הבית, מבחוץ ומבפנים.
 
@@ -62,7 +62,7 @@ export default new Vuex.Store({
       },
       {
         name: "אדנית מלבן",
-        img: [ require("@/assets/IMG_1329.jpg"), require("@/assets/IMG_1355.jpg"), require("@/assets/IMG_1311.jpg"), require("@/assets/IMG_1358.jpg")],
+        img: [require("@/assets/IMG_1329.jpg"), require("@/assets/IMG_1355.jpg"), require("@/assets/IMG_1311.jpg"), require("@/assets/IMG_1358.jpg")],
         description: `אדנית היא מכל לטיפוח צמחים המיועד להצבה על אדן חלון של בתים. בתוך אדנית מצע לגידול צמחים, בדרך כלל עפר מדושן,`,
         description1: `אדנית היא מכל לטיפוח צמחים המיועד להצבה על אדן חלון של בתים. בתוך אדנית מצע לגידול צמחים, בדרך כלל עפר מדושן, ובו נזרעים או נשתלים צמחים פרחוניים. נועדה לנוי ולקישוט הבית, מבחוץ ומבפנים.
 
@@ -198,7 +198,7 @@ export default new Vuex.Store({
     },
     PayablePlusMessenger: (state, getters) => {
       let Payable = getters.Payable;
-      if(state.ifMessenger){
+      if (state.ifMessenger) {
         Payable + state.messengerPrice;
       }
       return Payable
@@ -209,14 +209,18 @@ export default new Vuex.Store({
       }
       return true;
     },
-    
-   
+
+
   },
   mutations: {
     changeAmount(state, amountAndId) {
       for (let i in state.products) {
         if (state.products[i].id == amountAndId.id) {
-          state.products[i].amount = amountAndId.amount
+          if (amountAndId.addOn) {
+            state.products[i].amount += amountAndId.amount
+          } else {
+            state.products[i].amount = amountAndId.amount
+          }
         }
       }
     },

@@ -74,7 +74,8 @@
       addToCart() {
         this.$store.commit('changeAmount', {
           id: this.$route.params.id,
-          amount: this.amount
+          amount: this.amount, 
+          addOn: true
         });
         this.openCart = !this.openCart;
       },
