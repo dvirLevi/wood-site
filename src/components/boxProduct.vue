@@ -31,6 +31,7 @@
 <style scoped>
   .box-product {
     min-width: calc(100% / 3 + 0px);
+    scroll-snap-align: end;
   }
 
   .box-product .img-product {
