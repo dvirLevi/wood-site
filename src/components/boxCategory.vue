@@ -1,11 +1,11 @@
 <template>
-    <div class="col-md-6 mt-md-4 mb-md-4  mt-2 mb-2 pr-md-3 pl-md-3 pr-0 pl-0" >
+    <router-link :to="'store/'+ item.path" class="col-md-6 mt-md-4 mb-md-4  mt-2 mb-2 pr-md-3 pl-md-3 pr-0 pl-0 c-p" >
       <div class="w-100 col-box img-cover center-right-bottom" :style="{backgroundImage: `url(${item.img})`}">
         <div class="m-md-5 m-3 c-p">
-          <router-link :to="'store/'+ item.path" tag="h2" class="p-2">{{item.text}} <i class="las la-arrow-left"></i></router-link>
+          <h2 class="p-2">{{item.text}} <i class="las la-arrow-left"></i></h2>
         </div>
       </div>
-    </div>
+    </router-link>
 </template>
 
 <script>

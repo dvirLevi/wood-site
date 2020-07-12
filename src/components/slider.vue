@@ -30,7 +30,7 @@
       return {}
     },
     computed: {
-     
+
     },
     methods: {
       scrollR() {
@@ -41,7 +41,6 @@
       },
     }
   }
-
 </script>
 
 <style scoped>
@@ -62,7 +61,8 @@
     z-index: 1;
     left: -20px;
     top: 40%;
-    font-size: 40px;
+    font-size: 50px;
+    text-shadow: 1px 1px 9px #fff;
   }
 
   .arrow-r {
@@ -70,7 +70,8 @@
     z-index: 1;
     right: -20px;
     top: 40%;
-    font-size: 40px;
+    font-size: 50px;
+    text-shadow: 1px 1px 9px #fff;
   }
 
   /* .slider {
@@ -97,4 +98,13 @@
     background: #555;
   }
 
+  @media (max-width: 767.98px) {
+    .arrow-l {
+    left: -12px;
+  }
+
+  .arrow-r {
+    right: -12px;
+  }
+  }
 </style>
