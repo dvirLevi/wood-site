@@ -43,7 +43,7 @@
       </div>
       <div class="col-md-6">
         <form v-show="false" ref="myForm" name="formname" method="POST"
-          action="https://direct.tranzila.com/sabresltd/iframenew.php" target="iframe">
+          action="https://direct.tranzila.com/sabresltdch/iframenew.php" target="iframe">
           <input id="sum" name="sum" :value="PayablePlusMessenger" />
           <input id="currency" name="currency" value="1" />
           <input id="lang" name="lang" value="il" />

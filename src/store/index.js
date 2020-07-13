@@ -35,7 +35,7 @@ export default new Vuex.Store({
 
       אדניות מיוצרות ממגוון חומרים: עץ, פלסטיק ואחרים.`,
         addCart: false,
-        price: 1490,
+        price: 10,
         previousPrice: 0,
         amount: 0,
         category: "1",
@@ -56,7 +56,7 @@ export default new Vuex.Store({
 
         אדניות מיוצרות ממגוון חומרים: עץ, פלסטיק ואחרים.`,
         addCart: false,
-        price: 1490,
+        price: 10,
         previousPrice: 0,
         amount: 0,
         category: "1",
@@ -207,7 +207,7 @@ export default new Vuex.Store({
     PayablePlusMessenger: (state, getters) => {
       let Payable = getters.Payable;
       if (state.ifMessenger) {
-        Payable + state.messengerPrice;
+        Payable = Payable + state.messengerPrice;
       }
       return Payable
     },
