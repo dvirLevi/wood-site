@@ -51,6 +51,7 @@
 <style scoped>
       .counter {
     font-size: 15px;
+    user-select: none;
   }
   .counter div {
     padding: 0px 8px

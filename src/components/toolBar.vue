@@ -63,7 +63,7 @@
 
   @media (max-width: 767.98px) {
     .logo img {
-      width: 60px;
+      width: 82px;
     }
   }
 </style>

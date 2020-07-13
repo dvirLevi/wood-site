@@ -23,7 +23,7 @@ export default new Vuex.Store({
     products: [{
         name: "אדנית מסגרת",
         img: [require("@/assets/IMG_1208.jpg"), require("@/assets/IMG_1209.jpg"), require("@/assets/IMG_1210.jpg"), require("@/assets/IMG_1230.jpg"), require("@/assets/IMG_1240.jpg"), require("@/assets/IMG_1263.jpg")],
-        drow: require("@/assets/drow1.png"),
+        drow: require("@/assets/drow2.png"),
         description: `אדנית היא מכל לטיפוח צמחים המיועד להצבה על אדן חלון של בתים. בתוך אדנית מצע לגידול צמחים, בדרך כלל עפר מדושן,`,
         description1: `אדנית היא מכל לטיפוח צמחים המיועד להצבה על אדן חלון של בתים. בתוך אדנית מצע לגידול צמחים, בדרך כלל עפר מדושן, ובו נזרעים או נשתלים צמחים פרחוניים. נועדה לנוי ולקישוט הבית, מבחוץ ומבפנים.
 
@@ -44,7 +44,7 @@ export default new Vuex.Store({
       {
         name: "תכלת",
         img: [require("@/assets/IMG_1188.jpg"), require("@/assets/IMG_1220.jpg"), require("@/assets/IMG_1195.jpg")],
-        drow: require("@/assets/drow2.png"),
+        drow: require("@/assets/drow3.png"),
         description: `אדנית היא מכל לטיפוח צמחים המיועד להצבה על אדן חלון של בתים. בתוך אדנית מצע לגידול צמחים, בדרך כלל עפר מדושן,`,
         description1: `אדנית היא מכל לטיפוח צמחים המיועד להצבה על אדן חלון של בתים. בתוך אדנית מצע לגידול צמחים, בדרך כלל עפר מדושן, ובו נזרעים או נשתלים צמחים פרחוניים. נועדה לנוי ולקישוט הבית, מבחוץ ומבפנים.
 
@@ -65,7 +65,7 @@ export default new Vuex.Store({
       {
         name: "אדנית מלבן",
         img: [require("@/assets/IMG_1329.jpg"), require("@/assets/IMG_1355.jpg"), require("@/assets/IMG_1311.jpg"), require("@/assets/IMG_1358.jpg")],
-        drow: require("@/assets/drow3.png"),
+        drow: require("@/assets/drow1.png"),
         description: `אדנית היא מכל לטיפוח צמחים המיועד להצבה על אדן חלון של בתים. בתוך אדנית מצע לגידול צמחים, בדרך כלל עפר מדושן,`,
         description1: `אדנית היא מכל לטיפוח צמחים המיועד להצבה על אדן חלון של בתים. בתוך אדנית מצע לגידול צמחים, בדרך כלל עפר מדושן, ובו נזרעים או נשתלים צמחים פרחוניים. נועדה לנוי ולקישוט הבית, מבחוץ ומבפנים.
 
@@ -86,7 +86,7 @@ export default new Vuex.Store({
       {
         name: "סט קוביות",
         img: [require("@/assets/IMG_1298.jpg"), require("@/assets/IMG_1272.jpg"), require("@/assets/IMG_1277.jpg"), require("@/assets/IMG_1301.jpg"), require("@/assets/IMG_1269.jpg")],
-        drow: require("@/assets/drow4.png"),
+        drow: require("@/assets/drow6.png"),
         description: `אדנית היא מכל לטיפוח צמחים המיועד להצבה על אדן חלון של בתים. בתוך אדנית מצע לגידול צמחים, בדרך כלל עפר מדושן,`,
         description1: `אדנית היא מכל לטיפוח צמחים המיועד להצבה על אדן חלון של בתים. בתוך אדנית מצע לגידול צמחים, בדרך כלל עפר מדושן, ובו נזרעים או נשתלים צמחים פרחוניים. נועדה לנוי ולקישוט הבית, מבחוץ ומבפנים.
 
@@ -128,7 +128,7 @@ export default new Vuex.Store({
       {
         name: "טרפז",
         img: [require("@/assets/IMG_1348.jpg"), require("@/assets/IMG_1349.jpg")],
-        drow: require("@/assets/drow6.png"),
+        drow: require("@/assets/drow4.png"),
         description: `אדנית היא מכל לטיפוח צמחים המיועד להצבה על אדן חלון של בתים. בתוך אדנית מצע לגידול צמחים, בדרך כלל עפר מדושן,`,
         description1: `אדנית היא מכל לטיפוח צמחים המיועד להצבה על אדן חלון של בתים. בתוך אדנית מצע לגידול צמחים, בדרך כלל עפר מדושן, ובו נזרעים או נשתלים צמחים פרחוניים. נועדה לנוי ולקישוט הבית, מבחוץ ומבפנים.
 

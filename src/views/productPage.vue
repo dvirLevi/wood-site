@@ -24,7 +24,7 @@
           <ButtonLink text="הוסף לעגלה" @customEvent="addToCart" class=" h5" />
           <openCart v-if="openCart" @close="openCart = !openCart" />
         </div>
-        <div class="w-100 center drow">
+        <div class="w-100 center drow mt-3">
           <img :src="product.drow" alt="">
         </div>
       </div>
@@ -145,5 +145,8 @@
     .row-description h4 {
       border-left: none;
     }
+    .drow img {
+    width: 100%;
+  }
   }
 </style>
