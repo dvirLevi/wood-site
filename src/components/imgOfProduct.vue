@@ -1,5 +1,5 @@
 <template>
-  <div class="w-100 center">
+  <div class="w-100 center-top">
     <div class="w-100 img-cover img-product mt-md-0 mt-5 c-p" :style="{backgroundImage: `url(${correntImg})`}" @click="nextImg">
 
     </div>

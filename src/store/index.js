@@ -147,7 +147,7 @@ export default new Vuex.Store({
         id: 6
       },
       {
-        name: "אביזרים",
+        name: "שקי אדמה",
         img: [require("@/assets/IMG_1323.jpg"), require("@/assets/IMG_1242.jpg")],
         drow: false,
         description: `אדנית היא מכל לטיפוח צמחים המיועד להצבה על אדן חלון של בתים. בתוך אדנית מצע לגידול צמחים, בדרך כלל עפר מדושן,`,
