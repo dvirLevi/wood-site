@@ -1,26 +1,35 @@
 <template>
-  <footer class="row text-white mt-4 center">
-    <div class="col-md-2 center item-in-footer">
-      <a href="https://api.whatsapp.com/send?phone=972537234223">
-        <p><i class="lab la-whatsapp ml-2"></i>צור קשר בוואטספ</p>
-      </a>
+  <footer class="row text-white">
+    <div class="col">
+      <div class="row mt-4 center">
+        <div class="col-md-2 center item-in-footer">
+          <a href="https://api.whatsapp.com/send?phone=972537234223">
+            <p><i class="lab la-whatsapp ml-2"></i>צור קשר בוואטספ</p>
+          </a>
+        </div>
+        <div class="col-md-2 center item-in-footer">
+          <!-- <a href=""> -->
+          <p @click="showModal = !showModal">תקנון האתר</p>
+          <!-- </a> -->
+        </div>
+        <div class="col-md-2 center item-in-footer">
+          <a href="">
+            <p>שמריהו – אדניות עץ </p>
+          </a>
+        </div>
+        <div class="col-md-2 center item-in-footer">
+          <socialIcons />
+        </div>
+        <Modal v-if="showModal" @customEvent="showModal = !showModal">
+          <Regulations />
+        </Modal>
+      </div>
+      <div class="row mt-3">
+        <div class="col center">
+          <p class="m-2"><a href="https://apps-life.netlify.app" target="_blanc">נבנה ופותח בAppsLife</a></p>
+        </div>
+      </div>
     </div>
-    <div class="col-md-2 center item-in-footer">
-      <!-- <a href=""> -->
-      <p @click="showModal = !showModal">תקנון האתר</p>
-      <!-- </a> -->
-    </div>
-    <div class="col-md-2 center item-in-footer">
-      <a href="">
-        <p>שמריהו – אדניות עץ </p>
-      </a>
-    </div>
-    <div class="col-md-2 center item-in-footer">
-      <socialIcons />
-    </div>
-    <Modal v-if="showModal" @customEvent="showModal = !showModal">
-      <Regulations />
-    </Modal>
   </footer>
 </template>
 
