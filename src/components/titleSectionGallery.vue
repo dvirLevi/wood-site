@@ -21,6 +21,10 @@
             id: 1
           },
           {
+            img: require("@/assets/IMG_1276.jpg"),
+            id: 0
+          },
+          {
             img: require("@/assets/IMG_1266.jpg"),
             id: 2
           },
