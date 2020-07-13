@@ -21,7 +21,7 @@ export default new Vuex.Store({
       },
     ],
     products: [{
-        name: "אדנית מסגרת",
+        name: "רוטשילד",
         img: [require("@/assets/IMG_1208.jpg"), require("@/assets/IMG_1209.jpg"), require("@/assets/IMG_1210.jpg"), require("@/assets/IMG_1230.jpg"), require("@/assets/IMG_1240.jpg"), require("@/assets/IMG_1263.jpg")],
         drow: require("@/assets/drow2.png"),
         description: `אדנית היא מכל לטיפוח צמחים המיועד להצבה על אדן חלון של בתים. בתוך אדנית מצע לגידול צמחים, בדרך כלל עפר מדושן,`,
@@ -42,7 +42,7 @@ export default new Vuex.Store({
         id: 1
       },
       {
-        name: "תכלת",
+        name: "אחד העם",
         img: [require("@/assets/IMG_1188.jpg"), require("@/assets/IMG_1220.jpg"), require("@/assets/IMG_1195.jpg")],
         drow: require("@/assets/drow3.png"),
         description: `אדנית היא מכל לטיפוח צמחים המיועד להצבה על אדן חלון של בתים. בתוך אדנית מצע לגידול צמחים, בדרך כלל עפר מדושן,`,
@@ -63,7 +63,7 @@ export default new Vuex.Store({
         id: 2
       },
       {
-        name: "אדנית מלבן",
+        name: "ביאליק",
         img: [require("@/assets/IMG_1329.jpg"), require("@/assets/IMG_1355.jpg"), require("@/assets/IMG_1311.jpg"), require("@/assets/IMG_1358.jpg")],
         drow: require("@/assets/drow1.png"),
         description: `אדנית היא מכל לטיפוח צמחים המיועד להצבה על אדן חלון של בתים. בתוך אדנית מצע לגידול צמחים, בדרך כלל עפר מדושן,`,
@@ -84,7 +84,7 @@ export default new Vuex.Store({
         id: 3
       },
       {
-        name: "סט קוביות",
+        name: "ארלוזרוב",
         img: [require("@/assets/IMG_1298.jpg"), require("@/assets/IMG_1272.jpg"), require("@/assets/IMG_1277.jpg"), require("@/assets/IMG_1301.jpg"), require("@/assets/IMG_1269.jpg")],
         drow: require("@/assets/drow6.png"),
         description: `אדנית היא מכל לטיפוח צמחים המיועד להצבה על אדן חלון של בתים. בתוך אדנית מצע לגידול צמחים, בדרך כלל עפר מדושן,`,
@@ -105,7 +105,7 @@ export default new Vuex.Store({
         id: 4
       },
       {
-        name: "מריצה",
+        name: "שינקין",
         img: [require("@/assets/IMG_1332.jpg"), require("@/assets/IMG_1254.jpg"), require("@/assets/IMG_1258.jpg"), require("@/assets/IMG_1260.jpg"), require("@/assets/IMG_1283.jpg")],
         drow: require("@/assets/drow5.png"),
         description: `אדנית היא מכל לטיפוח צמחים המיועד להצבה על אדן חלון של בתים. בתוך אדנית מצע לגידול צמחים, בדרך כלל עפר מדושן,`,
@@ -126,7 +126,7 @@ export default new Vuex.Store({
         id: 5
       },
       {
-        name: "טרפז",
+        name: "דיזינגוף",
         img: [require("@/assets/IMG_1348.jpg"), require("@/assets/IMG_1349.jpg")],
         drow: require("@/assets/drow4.png"),
         description: `אדנית היא מכל לטיפוח צמחים המיועד להצבה על אדן חלון של בתים. בתוך אדנית מצע לגידול צמחים, בדרך כלל עפר מדושן,`,

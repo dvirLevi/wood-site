@@ -5,7 +5,7 @@
     </div>
     <div class="col center">
       <div class="text p-3">
-        <h1 @click="showHideText"> להפוך את המרפסת בשיינקין לכפר קטן ומטריף! <span v-if="mobOrDesk"><i
+        <h1 @click="showHideText"> להפוך את המרפסת בשינקין לכפר קטן ומטריף! <span v-if="mobOrDesk"><i
               class="las la-angle-down"></i></span></h1>
         <h4 v-if="ifShowText">שמריהו הוא מותג אדניות עץ ישראלי. אנחנו בונים אותן בקפדנות עם חומרי הגלם האיכותיים ביותר,
           ושולחים אותן במארז

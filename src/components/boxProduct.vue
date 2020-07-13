@@ -1,5 +1,5 @@
 <template>
-  <router-link :to="'/productPage/'+item.id" class="box-product p-2 center">
+  <router-link :to="'/productPage/'+item.id" class="box-product p-2 center" :style="{minWidth: `calc(100% / ${numInLine} + 0px)`}">
     <div class="w-100 img-cover img-product" :style="{backgroundImage: `url(${item.img[0]})`}">
 
     </div>
@@ -18,19 +18,30 @@
       // ButtonLink
     },
     props: {
-      item: Object
+      item: Object,
+      numInLine: {
+        default() {
+          return (this.$store.getters.mobOrDesk)? 2:3
+        },
+        type: Number
+      }
     },
     data() {
       return {
 
       }
     },
+    computed: {
+       mobOrDesk() {
+        return this.$store.getters.mobOrDesk
+      }
+    }
   }
 </script>
 
 <style scoped>
   .box-product {
-    min-width: calc(100% / 3 + 0px);
+    /* min-width: calc(100% / 3 + 0px); */
     scroll-snap-align: end;
   }
 

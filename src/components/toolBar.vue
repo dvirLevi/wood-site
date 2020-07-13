@@ -58,12 +58,12 @@
   }
 
   .logo img {
-    width: 100px;
+    width: 140px;
   }
 
   @media (max-width: 767.98px) {
     .logo img {
-      width: 82px;
+      width: 107px;
     }
   }
 </style>

@@ -39,9 +39,9 @@
     </div>
     <div class="row mt-3">
       <div class="col">
-        <h3>מוצרים נוספים שתאהב:</h3>
+        <h3>מוצרים נוספים:</h3>
         <slider>
-          <boxProduct v-for="item in products" :item="item" :key="item.id" />
+          <boxProduct v-for="item in products" :item="item" :key="item.id" :numInLine="(mobOrDesk)? 3:5" />
         </slider>
       </div>
     </div>
@@ -98,6 +98,9 @@
           return val.id.toString() !== this.$route.params.id
         })
         return shuffle(arr);
+      },
+       mobOrDesk() {
+        return this.$store.getters.mobOrDesk
       }
     }
   }
