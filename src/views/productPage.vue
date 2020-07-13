@@ -24,7 +24,7 @@
           <ButtonLink text="הוסף לעגלה" @customEvent="addToCart" class=" h5" />
           <openCart v-if="openCart" @close="openCart = !openCart" />
         </div>
-        <div class="w-100 center drow mt-3">
+        <div class="w-100 center drow mt-3" v-if="product.drow">
           <img :src="product.drow" alt="">
         </div>
       </div>
