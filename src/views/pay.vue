@@ -100,6 +100,9 @@
       };
     },
     mounted() {
+       fbq('track', 'ViewContent', {
+        content_name: this.$route.name,
+      });
       setTimeout(() => {
         this.$refs.myForm.submit()
       }, 100)

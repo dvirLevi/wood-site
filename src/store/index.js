@@ -225,6 +225,7 @@ export default new Vuex.Store({
       for (let i in state.products) {
         if (state.products[i].id == amountAndId.id) {
           if (amountAndId.addOn) {
+            fbq('track', 'AddToCart');
             state.products[i].amount += amountAndId.amount
           } else {
             state.products[i].amount = amountAndId.amount

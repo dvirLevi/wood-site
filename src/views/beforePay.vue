@@ -102,10 +102,16 @@
         showModal: false,
       };
     },
+    mounted() {
+      fbq('track', 'ViewContent', {
+        content_name: this.$route.name,
+      });
+    },
     methods: {
       nextToPay() {
         if (this.inCart.length) {
           this.$router.push("pay");
+           fbq('track', 'AddPaymentInfo');
         } else {
           Swal.fire({
             icon: "error",

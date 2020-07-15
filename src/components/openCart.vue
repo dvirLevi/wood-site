@@ -107,7 +107,7 @@
   .bac-menu .title h1 {
     padding: 30px;
     color: #fff;
-    background-color: #000;
+    background-color: var(--main-text-color);
   }
 
   .bac-menu h3 {

@@ -22,6 +22,11 @@
 
       }
     },
+    mounted() {
+      fbq('track', 'ViewContent', {
+        content_name: this.$route.name,
+      });
+    },
     computed: {
       products() {
         if (this.$route.params.id === "1") {

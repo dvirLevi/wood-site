@@ -73,11 +73,16 @@
         openCart: false
       }
     },
+    mounted() {
+      fbq('track', 'ViewContent', {
+        content_name: this.$route.name,
+      });
+    },
     methods: {
       addToCart() {
         this.$store.commit('changeAmount', {
           id: this.$route.params.id,
-          amount: this.amount, 
+          amount: this.amount,
           addOn: true
         });
         this.openCart = !this.openCart;
@@ -94,12 +99,12 @@
         return product[0];
       },
       products() {
-        let arr = this.$store.state.products.filter((val)=>{
+        let arr = this.$store.state.products.filter((val) => {
           return val.id.toString() !== this.$route.params.id
         })
         return shuffle(arr);
       },
-       mobOrDesk() {
+      mobOrDesk() {
         return this.$store.getters.mobOrDesk
       }
     }
@@ -148,8 +153,9 @@
     .row-description h4 {
       border-left: none;
     }
+
     .drow img {
-    width: 100%;
-  }
+      width: 100%;
+    }
   }
 </style>
