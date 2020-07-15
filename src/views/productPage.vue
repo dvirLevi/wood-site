@@ -77,6 +77,8 @@
       fbq('track', 'ViewContent', {
         content_name: this.$route.name,
       });
+      this.$ga.page(this.$route.name)
+      
     },
     methods: {
       addToCart() {

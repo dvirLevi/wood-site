@@ -103,6 +103,7 @@
        fbq('track', 'ViewContent', {
         content_name: this.$route.name,
       });
+      this.$ga.page(this.$route.name)
       setTimeout(() => {
         this.$refs.myForm.submit()
       }, 100)

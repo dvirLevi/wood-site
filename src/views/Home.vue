@@ -120,9 +120,11 @@
       }
     },
     mounted() {
-       fbq('track', 'ViewContent', {
+      fbq('track', 'ViewContent', {
         content_name: this.$route.name,
       });
+      this.$ga.page(this.$route.name)
+      
       if (this.mobOrDesk) {
         this.ifShowQues = false
       }
@@ -132,7 +134,11 @@
         if (this.mobOrDesk) {
           this.ifShowQues = !this.ifShowQues
         }
-      }
+      },
+      // track() {
+      //   alert()
+      //   this.$ga.page('/')
+      // }
     },
     computed: {
       mobOrDesk() {

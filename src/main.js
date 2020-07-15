@@ -6,6 +6,11 @@ import ButtonLink from '@/components/ButtonLink.vue'
 import Modal from '@/components/Modal.vue'
 import "../style/bootstrap.min.css"
 import "../style/global.css"
+import VueAnalytics from 'vue-analytics'
+
+Vue.use(VueAnalytics, {
+  id: 'UA-150230848-2'
+})
 
 
 Vue.component('ButtonLink', ButtonLink)
