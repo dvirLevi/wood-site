@@ -9,7 +9,8 @@ import "../style/global.css"
 import VueAnalytics from 'vue-analytics'
 
 Vue.use(VueAnalytics, {
-  id: 'UA-150230848-2'
+  id: 'UA-150230848-2',
+  router
 })
 
 
