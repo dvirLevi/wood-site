@@ -60,6 +60,7 @@
     font-size: 20px;
     /* font-weight: 100; */
     position: relative;
+    user-select: none;
     /* margin-top: 2px; */
   }
 
@@ -68,7 +69,7 @@
     background-color: #fff;
     color: #000;
     z-index: 4;
-    top: 100%;
+    top: 101%;
     right: 0;
     box-shadow: 2px 7px 11px #00000054;
     max-height: 300px;
@@ -95,12 +96,12 @@
   }
 
   .img-color {
-      width: 17px;
-      padding-top: 16%;
+      width: 30px;
+      padding-top: 21%;
     }
 
   p {
-    font-size: 15px;
+    font-size: 12px;
     margin: 0px;
   }
 

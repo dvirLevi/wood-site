@@ -1,5 +1,5 @@
 <template>
-  <footer class="row text-white">
+  <footer class="row text-white mt-4">
     <div class="col">
       <div class="row mt-4 center">
         <div class="col-md-2 center item-in-footer">

@@ -20,7 +20,7 @@
               <h3 class="text-center">כמות</h3>
             </div>
             <div class="w-100 center mt-2">
-              <counter @customEvent="incrementAmount" :passAmount="amount" />
+              <counter @customEvent="amount = $event" :passAmount="amount" operation="incroment" />
             </div>
           </div>
           <div class="col-md-4" v-if="product.color">
@@ -130,6 +130,7 @@
         let product = {
           ...this.product
         };
+        product.amount = this.amount;
         if (product.color) {
           product.color = this.colors[this.selectedColor].name;
         }
@@ -142,9 +143,6 @@
         });
         this.openCart = !this.openCart;
       },
-      incrementAmount(amount) {
-        this.amount = amount
-      }
     },
     computed: {
       product() {
