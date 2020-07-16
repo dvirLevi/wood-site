@@ -14,7 +14,7 @@
         <div class="w-100 center mb-4">
           <h4 class="text-center">{{product.description}}</h4>
         </div>
-        <div class="row">
+        <div class="row center-top">
           <div class="col-md-4">
             <div class="w-100 center mb-1 mt-2">
               <h3 class="text-center">כמות</h3>
@@ -23,7 +23,7 @@
               <counter @customEvent="incrementAmount" :passAmount="amount" />
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4" v-if="product.color">
             <div class="w-100 center mb-1 mt-2">
               <h3 class="text-center">צבע</h3>
             </div>
@@ -32,7 +32,7 @@
                 @mySelect="selectedColor = $event" :width="150" />
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4" v-if="product.size">
             <div class="w-100 center mb-1 mt-2">
               <h3 class="text-center">מידות</h3>
             </div>
@@ -130,8 +130,12 @@
         let product = {
           ...this.product
         };
-        product.color = this.colors[this.selectedColor].name;
-        product.size = this.sizes[this.selectedSize].name;
+        if (product.color) {
+          product.color = this.colors[this.selectedColor].name;
+        }
+        if (product.size) {
+          product.size = this.sizes[this.selectedSize].name;
+        }
         this.$store.commit('changeAmount', {
           obj: product,
           operation: '+'

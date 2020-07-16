@@ -5,8 +5,8 @@
     <div class="text pr-2 center-right">
       <div class="w-100 center-right">
         <div class="w-100 center-right">
-          <h5 class="m-0">{{item.name}} {{item.size}}</h5>
-          <div class="img-cover img-color m-1" v-if="item.img" :style="{backgroundImage: `url(${correntColor(item.color)})`}">
+          <h5 class="m-0">{{item.name}} <span v-if="item.size">{{item.size}}</span></h5>
+          <div class="img-cover img-color m-1" v-if="item.color" :style="{backgroundImage: `url(${correntColor(item.color)})`}">
           </div>
         </div>
         <h5>₪{{item.price}}</h5>
