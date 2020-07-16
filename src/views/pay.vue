@@ -152,8 +152,9 @@
       JSonProducts() {
         let json = [];
         for (let x in this.inCart) {
+          let productName = `${this.inCart[x].name} ${this.inCart[x].size} ${this.inCart[x].color}`
           json.push({
-            product_name: this.inCart[x].name,
+            product_name: productName,
             product_quantity: this.inCart[x].amount,
             // product_price: this.products[x].price,
             product_price: this.vat(this.inCart[x].price),

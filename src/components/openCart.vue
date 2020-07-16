@@ -6,7 +6,7 @@
       <div class="w-100 title center">
         <h1 class="w-100 text-center">סל קניות</h1>
         <div class="w-100 box-prod">
-        <productInOpenCart v-for="item in inCart" :item="item" :key="item.id" />
+        <productInOpenCart v-for="(item, index) in inCart" :item="item" :key="index" />
       </div>
       </div>
       
@@ -105,7 +105,7 @@
   } */
 
   .bac-menu .title h1 {
-    padding: 30px;
+    padding: 15px;
     color: #fff;
     background-color: var(--main-text-color);
   }

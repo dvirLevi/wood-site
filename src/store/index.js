@@ -9,6 +9,7 @@ export default new Vuex.Store({
     clientDatdlis: {},
     messengerPrice: 40,
     ifMessenger: true,
+    inCart: [],
     categories: [{
         name: "בית",
         link: "/",
@@ -34,10 +35,12 @@ export default new Vuex.Store({
         description3: `אדנית היא מכל לטיפוח צמחים המיועד להצבה על אדן חלון של בתים. בתוך אדנית מצע לגידול צמחים, בדרך כלל עפר מדושן, ובו נזרעים או נשתלים צמחים פרחוניים. נועדה לנוי ולקישוט הבית, מבחוץ ומבפנים.
 
       אדניות מיוצרות ממגוון חומרים: עץ, פלסטיק ואחרים.`,
+        color: false,
+        size: 2,
         addCart: false,
         price: 10,
         previousPrice: 0,
-        amount: 0,
+        amount: 1,
         category: "1",
         id: 1
       },
@@ -55,10 +58,12 @@ export default new Vuex.Store({
         description3: `אדנית היא מכל לטיפוח צמחים המיועד להצבה על אדן חלון של בתים. בתוך אדנית מצע לגידול צמחים, בדרך כלל עפר מדושן, ובו נזרעים או נשתלים צמחים פרחוניים. נועדה לנוי ולקישוט הבית, מבחוץ ומבפנים.
 
         אדניות מיוצרות ממגוון חומרים: עץ, פלסטיק ואחרים.`,
+        color: false,
+        size: 2,
         addCart: false,
         price: 10,
         previousPrice: 0,
-        amount: 0,
+        amount: 1,
         category: "1",
         id: 2
       },
@@ -76,10 +81,12 @@ export default new Vuex.Store({
         description3: `אדנית היא מכל לטיפוח צמחים המיועד להצבה על אדן חלון של בתים. בתוך אדנית מצע לגידול צמחים, בדרך כלל עפר מדושן, ובו נזרעים או נשתלים צמחים פרחוניים. נועדה לנוי ולקישוט הבית, מבחוץ ומבפנים.
 
         אדניות מיוצרות ממגוון חומרים: עץ, פלסטיק ואחרים.`,
+        color: false,
+        size: 2,
         addCart: false,
         price: 1490,
         previousPrice: 0,
-        amount: 0,
+        amount: 1,
         category: "1",
         id: 3
       },
@@ -97,10 +104,12 @@ export default new Vuex.Store({
         description3: `אדנית היא מכל לטיפוח צמחים המיועד להצבה על אדן חלון של בתים. בתוך אדנית מצע לגידול צמחים, בדרך כלל עפר מדושן, ובו נזרעים או נשתלים צמחים פרחוניים. נועדה לנוי ולקישוט הבית, מבחוץ ומבפנים.
 
         אדניות מיוצרות ממגוון חומרים: עץ, פלסטיק ואחרים.`,
+        color: false,
+        size: 2,
         addCart: false,
         price: 1490,
         previousPrice: 0,
-        amount: 0,
+        amount: 1,
         category: "1",
         id: 4
       },
@@ -118,10 +127,12 @@ export default new Vuex.Store({
         description3: `אדנית היא מכל לטיפוח צמחים המיועד להצבה על אדן חלון של בתים. בתוך אדנית מצע לגידול צמחים, בדרך כלל עפר מדושן, ובו נזרעים או נשתלים צמחים פרחוניים. נועדה לנוי ולקישוט הבית, מבחוץ ומבפנים.
 
         אדניות מיוצרות ממגוון חומרים: עץ, פלסטיק ואחרים.`,
+        color: false,
+        size: 2,
         addCart: false,
         price: 1490,
         previousPrice: 0,
-        amount: 0,
+        amount: 1,
         category: "1",
         id: 5
       },
@@ -139,10 +150,12 @@ export default new Vuex.Store({
         description3: `אדנית היא מכל לטיפוח צמחים המיועד להצבה על אדן חלון של בתים. בתוך אדנית מצע לגידול צמחים, בדרך כלל עפר מדושן, ובו נזרעים או נשתלים צמחים פרחוניים. נועדה לנוי ולקישוט הבית, מבחוץ ומבפנים.
 
         אדניות מיוצרות ממגוון חומרים: עץ, פלסטיק ואחרים.`,
+        color: false,
+        size: 2,
         addCart: false,
         price: 1490,
         previousPrice: 0,
-        amount: 0,
+        amount: 1,
         category: "1",
         id: 6
       },
@@ -163,7 +176,7 @@ export default new Vuex.Store({
         addCart: false,
         price: 1490,
         previousPrice: 0,
-        amount: 0,
+        amount: 1,
         category: "2",
         id: 7
       },
@@ -184,7 +197,7 @@ export default new Vuex.Store({
         addCart: false,
         price: 1490,
         previousPrice: 0,
-        amount: 0,
+        amount: 1,
         category: "2",
         id: 8
       },
@@ -192,10 +205,10 @@ export default new Vuex.Store({
   },
   getters: {
     inCart: (state) => {
-      let inCart = state.products.filter((value) => {
-        return value.amount > 0
-      })
-      return inCart
+      // let inCart = state.products.filter((value) => {
+      //   return value.amount > 0
+      // })
+      return state.inCart
     },
     Payable: (state, getters) => {
       let Payable = 0;
@@ -221,15 +234,30 @@ export default new Vuex.Store({
 
   },
   mutations: {
-    changeAmount(state, amountAndId) {
-      for (let i in state.products) {
-        if (state.products[i].id == amountAndId.id) {
-          if (amountAndId.addOn) {
-            fbq('track', 'AddToCart');
-            state.products[i].amount += amountAndId.amount
-          } else {
-            state.products[i].amount = amountAndId.amount
+    changeAmount(state, item) {
+      let ifExist = false;
+      for (let i in state.inCart) {
+        if (state.inCart[i].id === item.obj.id && state.inCart[i].color === item.obj.color && state.inCart[i].size === item.obj.size) {
+          if (item.operation === "+") {
+            state.inCart[i].amount = state.inCart[i].amount + 1;
+          } else if (item.operation === "-") {
+            if (state.inCart[i].amount > 1) {
+              state.inCart[i].amount = state.inCart[i].amount - 1;
+            } else {
+              state.inCart.splice(i, 1)
+            }
           }
+          ifExist = true;
+        }
+      }
+      if (!ifExist) {
+        if (item.operation === "+") {
+          state.inCart.push(item.obj)
+        }else if (item.operation === "-") {
+          let index = state.inCart.findIndex((el)=>{
+              el.id === item.obj.id
+          })
+          state.inCart.splice(index, 1)
         }
       }
     },

@@ -8,18 +8,43 @@
         <div class="col-md-7 mobile-flex">
           <imgOfProduct :imgs="product.img" />
         </div>
-        <div class="w-100 center mt-5 mb-5">
+        <div class="w-100 center mt-4 mb-4">
           <h5>₪{{product.price}}</h5>
         </div>
-        <div class="w-100 center mb-5">
+        <div class="w-100 center mb-4">
           <h4 class="text-center">{{product.description}}</h4>
         </div>
-        <div class="w-100 center mb-3">
-          <h3 class="text-center">כמות</h3>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="w-100 center mb-1 mt-2">
+              <h3 class="text-center">כמות</h3>
+            </div>
+            <div class="w-100 center mt-2">
+              <counter @customEvent="incrementAmount" :passAmount="amount" />
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="w-100 center mb-1 mt-2">
+              <h3 class="text-center">צבע</h3>
+            </div>
+            <div class="w-100 center">
+              <selectOption :items="colors" :defulteSelect="selectedColor" themeColor="#444444"
+                @mySelect="selectedColor = $event" :width="150" />
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="w-100 center mb-1 mt-2">
+              <h3 class="text-center">מידות</h3>
+            </div>
+            <div class="w-100 center">
+              <selectOption :items="sizes" :defulteSelect="selectedSize" themeColor="#444444"
+                @mySelect="selectedSize = $event" :width="150" />
+            </div>
+          </div>
         </div>
-        <div class="w-100 center">
-          <counter @customEvent="incrementAmount" :passAmount="amount" />
-        </div>
+
+
+
         <div class="w-100 center mt-5">
           <ButtonLink text="הוסף לעגלה" @customEvent="addToCart" class=" h5" />
           <openCart v-if="openCart" @close="openCart = !openCart" />
@@ -52,11 +77,13 @@
 <script>
   // @ is an alias to /src
   import counter from '@/components/counter.vue'
+  import selectOption from '@/components/selectOption.vue'
   import openCart from '@/components/openCart.vue'
   import imgOfProduct from '@/components/imgOfProduct.vue'
   import slider from '@/components/slider.vue'
   import boxProduct from '@/components/boxProduct.vue'
   import shuffle from '@/helpers/shuffle.js'
+  import colors from '@/helpers/colors.js'
 
   export default {
     name: 'productPage',
@@ -65,26 +92,49 @@
       openCart,
       imgOfProduct,
       slider,
-      boxProduct
+      boxProduct,
+      selectOption
     },
     data() {
       return {
         amount: 1,
-        openCart: false
+        openCart: false,
+        selectedColor: 0,
+        selectedSize: 1,
+        sizes: [{
+            name: "קטן",
+            img: false,
+            id: 0
+          },
+          {
+            name: "בינוני",
+            img: false,
+            id: 1
+          },
+          {
+            name: "גדול",
+            img: false,
+            id: 2
+          },
+        ]
       }
     },
     mounted() {
       fbq('track', 'ViewContent', {
         content_name: this.$route.name,
       });
-      
+
     },
     methods: {
       addToCart() {
+        let product = {
+          ...this.product
+        };
+        product.color = this.colors[this.selectedColor].name;
+        product.size = this.sizes[this.selectedSize].name;
         this.$store.commit('changeAmount', {
-          id: this.$route.params.id,
-          amount: this.amount,
-          addOn: true
+          obj: product,
+          operation: '+'
         });
         this.openCart = !this.openCart;
       },
@@ -104,6 +154,9 @@
           return val.id.toString() !== this.$route.params.id
         })
         return shuffle(arr);
+      },
+      colors() {
+        return colors
       },
       mobOrDesk() {
         return this.$store.getters.mobOrDesk

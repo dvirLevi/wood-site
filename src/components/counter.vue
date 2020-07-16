@@ -4,7 +4,7 @@
       +
     </div>
     <div>
-      {{amount}}
+      {{passAmount}}
     </div>
     <div @click.stop="counter('-')" class="border-right c-p">
       -
@@ -29,35 +29,27 @@
       }
     },
     mounted() {
-      this.amount = this.passAmount
+      // this.amount = this.passAmount
     },
     methods: {
       counter(action) {
-        if (this.amount > 0) {
-          if (action === '-') this.amount--
-          if (action === '+') this.amount++
-        } else if (this.amount === 0) {
-          if (action === '+') this.amount++
-        }
-        this.emitAmount(this.amount)
+        if (action === '-') this.$emit('customEvent', "-")
+        if (action === '+') this.$emit('customEvent', "+")
       },
-      emitAmount(amount) {
-        this.$emit('customEvent', amount)
-      }
+
     }
   }
 </script>
 
 <style scoped>
-      .counter {
+  .counter {
     font-size: 15px;
     user-select: none;
   }
+
   .counter div {
     padding: 0px 8px
   }
 
-  @media (max-width: 767.98px) {
- 
-  }
+  @media (max-width: 767.98px) {}
 </style>

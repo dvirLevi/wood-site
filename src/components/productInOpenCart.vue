@@ -4,10 +4,13 @@
     </div>
     <div class="text pr-2 center-right">
       <div class="w-100 center-right">
-        <h5 class="w-100">{{item.name}}</h5>
+        <div class="w-100 center-right">
+          <h5 class="m-0">{{item.name}} {{item.size}}</h5>
+          <div class="img-cover img-color m-1" v-if="item.img" :style="{backgroundImage: `url(${correntColor(item.color)})`}">
+          </div>
+        </div>
         <h5>₪{{item.price}}</h5>
       </div>
-
       <div class="w-100 center-left">
         <counter @customEvent="changeAmount" :passAmount="item.amount" />
       </div>
@@ -20,6 +23,7 @@
 
 <script>
   import counter from '@/components/counter.vue'
+  import colors from '@/helpers/colors.js'
 
   export default {
     name: 'productInOpenCart',
@@ -27,7 +31,7 @@
       counter
     },
     props: {
-      item: Object
+      item: Object,
     },
     data() {
       return {
@@ -36,16 +40,23 @@
       }
     },
     computed: {
-
+       
 
     },
     methods: {
-      changeAmount(amount) {
+      changeAmount(operation) {
         this.$store.commit('changeAmount', {
-          id: this.item.id,
-          amount: amount
+          obj: this.item,
+          operation: operation
         });
-      }
+      },
+      correntColor(name) {
+         let color = colors.filter((val)=>{
+           return val.name === name
+         })
+         console.log(color)
+         return color[0].img
+       }
     }
   }
 </script>
@@ -70,6 +81,11 @@
   .product-in-cart .text h5 {
     font-size: 18px;
     font-weight: 300;
+  }
+
+  .img-color {
+    width: 20px;
+    height: 20px;
   }
 
 
