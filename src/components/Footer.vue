@@ -9,7 +9,7 @@
         </div>
         <div class="col-md-2 center item-in-footer">
           <!-- <a href=""> -->
-          <p @click="showModal = !showModal">תקנון האתר</p>
+          <p class="c-p" @click="showModal = !showModal">תקנון האתר</p>
           <!-- </a> -->
         </div>
         <div class="col-md-2 center item-in-footer">

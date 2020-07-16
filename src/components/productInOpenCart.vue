@@ -12,7 +12,7 @@
         <h5>₪{{item.price}}</h5>
       </div>
       <div class="w-100 center-left">
-        <counter @customEvent="changeAmount" :passAmount="item.amount" />
+        <counter @customEvent="changeAmount" :passAmount="item.amount" operation="operation" />
       </div>
     </div>
   </div>
@@ -45,8 +45,12 @@
     },
     methods: {
       changeAmount(operation) {
+         let product = {
+          ...this.item
+        };
+        product.amount = 1;
         this.$store.commit('changeAmount', {
-          obj: this.item,
+          obj: product,
           operation: operation
         });
       },
