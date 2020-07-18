@@ -2,6 +2,10 @@
   <div class="container mt-5 page-product">
     <div class="row">
       <div class="col-md-5">
+        <div class="w-100 center-right">
+          <router-link to="/store/all" tag="h3" class="text-center c-p"><i class="las la-angle-right"></i>חזרה לחנות
+          </router-link>
+        </div>
         <div class="w-100 center">
           <h1 class="text-center">{{product.name}}</h1>
         </div>
@@ -50,7 +54,10 @@
           <openCart v-if="openCart" @close="openCart = !openCart" />
         </div>
         <div class="w-100 center drow mt-5" v-if="product.drow">
-          <img :src="product.drow" alt="">
+          <img :src="product.drow" alt="" @click="showDrow = true">
+          <Modal v-if="showDrow" @customEvent="showDrow = !showDrow">
+            <img :src="product.drow" alt="">
+          </Modal>
         </div>
       </div>
       <div class="col-md-7 desktop-flex">
@@ -64,7 +71,7 @@
     </div>
     <div class="row mt-3">
       <div class="col">
-        <h3>מוצרים נוספים:</h3>
+        <h2 class="font-weight-bold">מוצרים נוספים:</h2>
         <slider>
           <boxProduct v-for="item in products" :item="item" :key="item.id" :numInLine="(mobOrDesk)? 3:5" />
         </slider>
@@ -97,11 +104,12 @@
     },
     data() {
       return {
+        showDrow: false,
         amount: 1,
         openCart: false,
         selectedColor: 0,
         selectedSize: 1,
-        sizes: [{
+        allSizes: [{
             name: "קטן",
             img: false,
             id: 0
@@ -115,6 +123,11 @@
             name: "גדול",
             img: false,
             id: 2
+          },
+          {
+            name: "כל הסט",
+            img: false,
+            id: 3
           },
         ]
       }
@@ -132,6 +145,7 @@
         };
         product.amount = this.amount;
         if (product.color) {
+          console.log()
           product.color = this.colors[this.selectedColor].name;
         }
         if (product.size) {
@@ -159,6 +173,12 @@
       },
       colors() {
         return colors
+      },
+      sizes() {
+        if (this.product.name === "ארלוזרוב") {
+          return this.allSizes
+        }
+        return this.allSizes.slice(0,3)
       },
       mobOrDesk() {
         return this.$store.getters.mobOrDesk
@@ -202,7 +222,7 @@
   }
 
   .drow img {
-    width: 75%;
+    width: 100%;
   }
 
   @media (max-width: 767.98px) {

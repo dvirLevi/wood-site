@@ -21,7 +21,7 @@
             text: "אדניות"
           },
            {
-            img: require("@/assets/IMG_1279.jpg"),
+            img: require("@/assets/IMG_1353.jpg"),
             path: "2",
             text: "אביזרים"
           },

@@ -16,7 +16,7 @@
           <div class="container">
             <div class="row">
               <div class="col center-right" @click="showHideText">
-                <h2>שאלות ותשובות: <span v-if="mobOrDesk"><i class="las la-angle-down"></i></span></h2>
+                <h2 class="font-weight-bold">שאלות ותשובות: <span v-if="mobOrDesk"><i class="las la-angle-down"></i></span></h2>
               </div>
             </div>
             <div class="row" v-if="ifShowQues">
@@ -83,7 +83,7 @@
           },
           {
             question: "האם תוכלו לצבוע לנו את האדניות?",
-            answer: "במהלך הרכישה באתר תוכלו לסמן באיזה צבע תרצו את האדנית. זה מתחיל בצבע שמן טבעי, ונגמר בצבעים משוגעים לחלוטין. תוכלו גם להזמין צבע מיוחד מתוך המניפה של טמבור, באמצעות הוואטספ שלנו. הצביעה בתוספת תשלום.",
+            answer: `במהלך הרכישה באתר תוכלו לסמן באיזה צבע תרצו את האדנית. אנחנו משתמשים במותג האיכות THE REAL MILK PAINT, מטנסי ארה"ב, בשילוב עם שמן טאנג טבעי ועמיד! הצביעה בתוספת תשלום.`,
             id: 2
           },
           {

@@ -83,6 +83,11 @@ const colors = [{
       img: require("@/assets/colors/willow.jpg"),
       id: 16
     },
+    {
+      name: "שמן טאנג טבעי",
+      img: false,
+      id: 17
+    },
   ]
 
   export default colors
