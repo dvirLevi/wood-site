@@ -54,7 +54,7 @@
           <openCart v-if="openCart" @close="openCart = !openCart" />
         </div>
         <div class="w-100 center drow mt-5" v-if="product.drow">
-          <img :src="product.drow" alt="" @click="showDrow = true">
+          <img class="c-p" :src="product.drow" alt="" @click="showDrow = true">
           <Modal v-if="showDrow" @customEvent="showDrow = !showDrow">
             <img :src="product.drow" alt="">
           </Modal>
