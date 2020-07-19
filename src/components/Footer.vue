@@ -13,9 +13,9 @@
           <!-- </a> -->
         </div>
         <div class="col-md-2 center item-in-footer">
-          <a href="">
+          <router-link to="/">
             <p>שמריהו – אדניות עץ </p>
-          </a>
+          </router-link>
         </div>
         <div class="col-md-2 center item-in-footer">
           <socialIcons />

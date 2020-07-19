@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-md-5">
         <div class="w-100 center-right">
-          <router-link to="/store/all" tag="h3" class="text-center c-p"><i class="las la-angle-right"></i>חזרה לחנות
+          <router-link to="/store/all" tag="h5" class="text-center c-p"><i class="las la-angle-right"></i>חזרה
           </router-link>
         </div>
         <div class="w-100 center">
@@ -55,7 +55,7 @@
         </div>
         <div class="w-100 center drow mt-5" v-if="product.drow">
           <img class="c-p" :src="product.drow" alt="" @click="showDrow = true">
-          <Modal v-if="showDrow" @customEvent="showDrow = !showDrow">
+          <Modal v-if="showDrow && !mobOrDesk" @customEvent="showDrow = !showDrow">
             <img :src="product.drow" alt="">
           </Modal>
         </div>
@@ -110,6 +110,11 @@
         selectedColor: 0,
         selectedSize: 1,
         allSizes: [{
+            name: "כל הסט",
+            img: false,
+            id: 3
+          }, 
+          {
             name: "קטן",
             img: false,
             id: 0
@@ -124,11 +129,7 @@
             img: false,
             id: 2
           },
-          {
-            name: "כל הסט",
-            img: false,
-            id: 3
-          },
+
         ]
       }
     },
@@ -145,11 +146,14 @@
         };
         product.amount = this.amount;
         if (product.color) {
-          console.log()
-          product.color = this.colors[this.selectedColor].name;
+          product.color = this.colors.filter((val) => {
+            return val.id === this.selectedColor
+          })[0].name;
         }
         if (product.size) {
-          product.size = this.sizes[this.selectedSize].name;
+          product.size = this.sizes.filter((val) => {
+            return val.id === this.selectedSize
+          })[0].name;
         }
         this.$store.commit('changeAmount', {
           obj: product,
@@ -176,9 +180,9 @@
       },
       sizes() {
         if (this.product.name === "ארלוזרוב") {
-          return this.allSizes
+          return this.allSizes.slice(0, 4)
         }
-        return this.allSizes.slice(0,3)
+        return this.allSizes.slice(1, 4)
       },
       mobOrDesk() {
         return this.$store.getters.mobOrDesk
