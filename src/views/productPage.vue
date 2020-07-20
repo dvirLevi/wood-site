@@ -21,7 +21,7 @@
         <div class="row center-top">
           <div class="col-md-4">
             <div class="w-100 center mb-1 mt-2">
-              <h3 class="text-center">כמות</h3>
+              <h3 class="text-center">כמות <span v-if="amountInPackage">{{amountInPackage}}</span></h3>
             </div>
             <div class="w-100 center mt-2">
               <counter @customEvent="amount = $event" :passAmount="amount" operation="incroment" />
@@ -41,7 +41,7 @@
               <h3 class="text-center">מידות</h3>
             </div>
             <div class="w-100 center">
-              <selectOption :items="sizes" :defulteSelect="selectedSize" themeColor="#444444"
+              <selectOption :items="sizes" :defulteSelect="computeSelectedSize" themeColor="#444444"
                 @mySelect="selectedSize = $event" :width="150" />
             </div>
           </div>
@@ -64,10 +64,11 @@
         <imgOfProduct :imgs="product.img" />
       </div>
     </div>
-    <div class="row row-description  mt-md-5 mt-0 border-bottom pb-5 pt-5">
-      <h4 class="col-md-4">{{product.description1}}</h4>
-      <h4 class="col-md-4">{{product.description2}}</h4>
-      <h4 class="col-md-4">{{product.description3}}</h4>
+    <div class="row row-description  mt-md-5 mt-0 border-bottom pb-3 pt-3"
+      v-if="product.description1 || product.description2 || product.description3">
+      <h4 class="col-md-4" v-if="product.description1">{{product.description1}}</h4>
+      <h4 class="col-md-4" v-if="product.description2">{{product.description2}}</h4>
+      <h4 class="col-md-4" v-if="product.description3">{{product.description3}}</h4>
     </div>
     <div class="row mt-3">
       <div class="col">
@@ -108,26 +109,26 @@
         amount: 1,
         openCart: false,
         selectedColor: 0,
-        selectedSize: 1,
+        selectedSize: 0,
         allSizes: [{
             name: "כל הסט",
             img: false,
-            id: 3
-          }, 
-          {
-            name: "קטן",
-            img: false,
-            id: 0
+            id: 4
           },
           {
-            name: "בינוני",
+            name: "קטן",
             img: false,
             id: 1
           },
           {
-            name: "גדול",
+            name: "בינוני",
             img: false,
             id: 2
+          },
+          {
+            name: "גדול",
+            img: false,
+            id: 3
           },
 
         ]
@@ -152,7 +153,7 @@
         }
         if (product.size) {
           product.size = this.sizes.filter((val) => {
-            return val.id === this.selectedSize
+            return val.id === this.computeSelectedSize
           })[0].name;
         }
         this.$store.commit('changeAmount', {
@@ -183,6 +184,20 @@
           return this.allSizes.slice(0, 4)
         }
         return this.allSizes.slice(1, 4)
+      },
+      computeSelectedSize() {
+        if (this.product.name === "ארלוזרוב") {
+          return (this.selectedSize) ? this.selectedSize : 4
+        }
+        return (this.selectedSize) ? this.selectedSize : 2
+      },
+      amountInPackage() {
+        if (this.product.name === "שלטים") {
+          return '(10 פריטים בחבילה)'
+        } else if (this.product.name === "שקי אדמה") {
+          return '(כל שק מכיל 25 ליטר תערובת)'
+        }
+        return false
       },
       mobOrDesk() {
         return this.$store.getters.mobOrDesk
