@@ -71,6 +71,10 @@
     border-left: none;
   }
 
+  .item-in-footer a p {
+    color: #fff !important;
+  }
+
   @media (max-width: 767.98px) {
     footer .item-in-footer {
       border-left: none;
