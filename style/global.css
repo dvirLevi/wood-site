@@ -168,6 +168,10 @@ a:active {
   color: inherit ;
 }
 
+.row-description a {
+  color: #007bff;
+}
+
 .product-in-cart {
   border-bottom: solid #dee2e6 1px;
 }

@@ -66,9 +66,9 @@
     </div>
     <div class="row row-description  mt-md-5 mt-0 border-bottom pb-3 pt-3"
       v-if="product.description1 || product.description2 || product.description3">
-      <h4 class="col-md-4" v-if="product.description1">{{product.description1}}</h4>
-      <h4 class="col-md-4" v-if="product.description2">{{product.description2}}</h4>
-      <h4 class="col-md-4" v-if="product.description3">{{product.description3}}</h4>
+      <h4 class="col-md-4" v-if="product.description1" v-html="product.description1"></h4>
+      <h4 class="col-md-4" v-if="product.description2" v-html="product.description2"></h4>
+      <h4 class="col-md-4" v-if="product.description3" v-html="product.description3"></h4>
     </div>
     <div class="row mt-3">
       <div class="col">
