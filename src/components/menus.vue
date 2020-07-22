@@ -28,7 +28,9 @@
 <style scoped>
 .menu {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  align-content:center;
   justify-content: center;
   position: fixed; /* Stay in place */
   z-index: 99; /* Sit on top */
