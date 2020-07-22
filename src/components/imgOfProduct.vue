@@ -1,6 +1,9 @@
 <template>
   <div class="w-100">
-    <div class="w-100 img-cover img-product mt-md-0 mt-5 c-p" :style="{backgroundImage: `url(${correntImg})`}" @touchend="nextImg" @click="nextImg">
+    <div class="w-100 img-cover img-product mt-md-0 mt-5 c-p" :style="{backgroundImage: `url(${correntImg})`}" v-if="!mobOrDesk" @click="nextImg">
+
+    </div>
+    <div class="w-100 img-cover img-product mt-md-0 mt-5 c-p" :style="{backgroundImage: `url(${correntImg})`}" v-else @touchend="nextImg">
 
     </div>
     <div class="center mt-2">
@@ -38,6 +41,9 @@
       correntImg() {
         return this.imgs[this.imgIndex]
       },
+       mobOrDesk() {
+        return this.$store.getters.mobOrDesk
+      }
 
     }
   }
