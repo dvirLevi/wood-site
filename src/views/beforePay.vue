@@ -133,7 +133,7 @@
         return this.$store.getters.Payable;
       },
       messengerPrice() {
-        return this.$store.state.messengerPrice;
+        return this.$store.getters.messengerPrice;
       },
       ifMessenger() {
         return this.$store.state.ifMessenger;

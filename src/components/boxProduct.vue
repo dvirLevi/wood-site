@@ -5,7 +5,7 @@
     </div>
     <h5 class="w-100 text-center pt-3 pb-3 m-0">{{item.name}}</h5>
     <div class="border w-25"></div>
-    <h6 class="w-100 text-center pt-3 pb-3 m-0">₪{{item.price}}</h6>
+    <h6 class="w-100 text-center pt-3 pb-3 m-0">₪{{item.type[0].price}}</h6>
   </router-link>
 </template>
 

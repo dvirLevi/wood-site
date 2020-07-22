@@ -13,7 +13,7 @@
           <imgOfProduct :imgs="product.img" />
         </div>
         <div class="w-100 center mt-4 mb-4">
-          <h5>₪{{product.price}}</h5>
+          <h5>₪{{computePrice}}</h5>
         </div>
         <div class="w-100 center mb-4">
           <h4 class="text-center">{{product.description}}</h4>
@@ -38,10 +38,10 @@
           </div>
           <div class="col-md-4" v-if="product.size">
             <div class="w-100 center mb-1 mt-2">
-              <h3 class="text-center">מידות</h3>
+              <h3 class="text-center">דגם</h3>
             </div>
             <div class="w-100 center">
-              <selectOption :items="sizes" :defulteSelect="computeSelectedSize" themeColor="#444444"
+              <selectOption :items="sizes" :defulteSelect="selectedSize" themeColor="#444444"
                 @mySelect="selectedSize = $event" :width="150" />
             </div>
           </div>
@@ -110,35 +110,37 @@
         openCart: false,
         selectedColor: 0,
         selectedSize: 0,
-        allSizes: [{
-            name: "כל הסט",
-            img: false,
-            id: 4
-          },
-          {
-            name: "קטן",
-            img: false,
-            id: 1
-          },
-          {
-            name: "בינוני",
-            img: false,
-            id: 2
-          },
-          {
-            name: "גדול",
-            img: false,
-            id: 3
-          },
+        // allSizes: [{
+        //     name: "כל הסט",
+        //     img: false,
+        //     id: 4
+        //   },
+        //   {
+        //     name: "קטן",
+        //     img: false,
+        //     id: 1
+        //   },
+        //   {
+        //     name: "בינוני",
+        //     img: false,
+        //     id: 2
+        //   },
+        //   {
+        //     name: "גדול",
+        //     img: false,
+        //     id: 3
+        //   },
 
-        ]
+        // ]
       }
+    },
+    created() {
+      this.selectedSize = this.sizes[0].id;
     },
     mounted() {
       fbq('track', 'ViewContent', {
         content_name: this.$route.name,
       });
-
     },
     methods: {
       addToCart() {
@@ -146,15 +148,14 @@
           ...this.product
         };
         product.amount = this.amount;
+        product.price = this.computePrice;
         if (product.color) {
           product.color = this.colors.filter((val) => {
             return val.id === this.selectedColor
           })[0].name;
         }
         if (product.size) {
-          product.size = this.sizes.filter((val) => {
-            return val.id === this.computeSelectedSize
-          })[0].name;
+          product.size = this.computeSelectedSize.name;
         }
         this.$store.commit('changeAmount', {
           obj: product,
@@ -180,16 +181,19 @@
         return colors
       },
       sizes() {
-        if (this.product.name === "ארלוזרוב") {
-          return this.allSizes.slice(0, 4)
-        }
-        return this.allSizes.slice(1, 4)
+        return this.product.type
       },
       computeSelectedSize() {
-        if (this.product.name === "ארלוזרוב") {
-          return (this.selectedSize) ? this.selectedSize : 4
-        }
-        return (this.selectedSize) ? this.selectedSize : 2
+        return this.sizes.filter((val) => {
+            return val.id === this.selectedSize
+          })[0]
+      },
+       computePrice() {
+         let price = this.computeSelectedSize.price;
+         if(this.selectedColor) {
+           price += 100;
+         }
+        return price
       },
       amountInPackage() {
         if (this.product.name === "שלטים") {
@@ -268,7 +272,7 @@
       width: 35%;
     }
 
-    
+
 
     .drow img {
       width: 100%;

@@ -8,7 +8,7 @@ export default new Vuex.Store({
   state: {
     windowWidth: "",
     clientDatdlis: {},
-    messengerPrice: 40,
+    messengerPrice: 100,
     ifMessenger: true,
     inCart: [],
     categories: [{
@@ -20,6 +20,11 @@ export default new Vuex.Store({
         name: "חנות",
         link: "/store/all",
         id: 2,
+      },
+      {
+        name: "אודות",
+        link: "/asd",
+        id: 3,
       },
     ],
     products: products
@@ -41,9 +46,18 @@ export default new Vuex.Store({
     PayablePlusMessenger: (state, getters) => {
       let Payable = getters.Payable;
       if (state.ifMessenger) {
-        Payable = Payable + state.messengerPrice;
+        Payable = Payable + getters.messengerPrice;
       }
       return Payable
+    },
+    messengerPrice: (state, getters) => {
+      let price = 50;
+      for(let i in getters.inCart) {
+        if (getters.inCart[i].id !== 8 && getters.inCart[i].id !== 7 && getters.inCart[i].id !== 4) {
+          price = 100;
+        }
+      }
+      return price
     },
     mobOrDesk: (state) => {
       if (state.windowWidth > 767) {
