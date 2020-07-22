@@ -66,9 +66,9 @@
     </div>
     <div class="row row-description  mt-md-5 mt-0 border-bottom pb-3 pt-3"
       v-if="product.description1 || product.description2 || product.description3">
-      <h4 class="col-md-4" v-if="product.description1" v-html="product.description1"></h4>
-      <h4 class="col-md-4" v-if="product.description2" v-html="product.description2"></h4>
-      <h4 class="col-md-4" v-if="product.description3" v-html="product.description3"></h4>
+      <div class="col-md-4 description" v-if="product.description1" v-html="product.description1"></div>
+      <div class="col-md-4 description" v-if="product.description2" v-html="product.description2"></div>
+      <div class="col-md-4 description" v-if="product.description3" v-html="product.description3"></div>
     </div>
     <div class="row mt-3">
       <div class="col">
@@ -231,12 +231,12 @@
     font-weight: 300;
   }
 
-  .row-description h4 {
+  .row-description .description {
     border-left: solid #dee2e6 1px;
     padding: 20px;
   }
 
-  .row-description h4:last-child {
+  .row-description .description:last-child {
     border-left: none;
   }
 
@@ -245,9 +245,30 @@
   }
 
   @media (max-width: 767.98px) {
-    .row-description h4 {
+    .row-description .description {
       border-left: none;
+      position: relative;
     }
+
+    .row-description .description::before {
+      content: "";
+      border-top: solid #dee2e6 1px;
+      position: absolute;
+      top: 0;
+      right: 20px;
+      width: 35%;
+    }
+
+    .row-description .description:first-child::before {
+      content: "";
+      border-top: none;
+      position: absolute;
+      top: 0;
+      right: 20px;
+      width: 35%;
+    }
+
+    
 
     .drow img {
       width: 100%;

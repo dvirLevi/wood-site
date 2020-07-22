@@ -168,6 +168,10 @@ a:active {
   color: inherit ;
 }
 
+/* .row-description p {
+  font-size: 18px;
+} */
+
 .row-description a {
   color: #007bff;
 }
