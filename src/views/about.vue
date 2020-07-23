@@ -2,7 +2,7 @@
   <div class="container mt-5">
     <div class="row">
       <div class="col center-right">
-        <h2 class="font-weight-bold">שאלות ותשובות:</h2>
+        <h2 class="font-weight-bold">אודות:</h2>
       </div>
     </div>
     <div class="row">
@@ -24,7 +24,7 @@
     </div>
     <div class="row">
       <div class="col">
-        <form @submit.prevent="sendMail" class=" center-right mt-3">
+        <form @submit.prevent="sendMail" class=" center-right">
           <div class="w-100 center-right">
             <input type="text" placeholder="*שם מלא" v-model="clientDatdlis.name" required>
           </div>
@@ -41,13 +41,19 @@
           <div class="w-100 center-right mt-3 confirm">
             <input type="checkbox" :checked="clientDatdlis.ifConfirmMail"
               @click="clientDatdlis.ifConfirmMail = !clientDatdlis.ifConfirmMail">
-            <span>לקבלת מתכונים, טיפים ומבצעים לדוא"ל</span>
+            <span>לקבלת טיפים, עדכונים ומבצעים לדוא"ל</span>
           </div>
           <div class="w-100 center-right">
             <ButtonLink :text="textSend" class="mt-4" />
             <!-- <button type="submit">{{textSend}}</button> -->
           </div>
         </form>
+      </div>
+    </div>
+    <div class="row border-top mt-5">
+      <div class="col mt-3">
+        <p>שׁמַרְיָהוּ | אדניות עץ 053-7234223 </p>
+        <p>יוחנן 11, אלעזר</p>
       </div>
     </div>
   </div>

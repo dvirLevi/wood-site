@@ -37,8 +37,8 @@ const myMail = {
         }
         let contentMail = {
           from: "napoli@napoli.com",
-          // to: "dvirlevi2@gmail.com",
-          to: "boazlevy100@gmail.com",
+          to: "dvirlevi2@gmail.com",
+          // to: "boazlevy100@gmail.com",
           subject: subject,
           html: `<p>${htmlString}</p>`,
         }
@@ -49,16 +49,16 @@ const myMail = {
         resolve(res)
         // console.log(res + "(:")
         await Swal.fire({
-          type: 'success',
-          title: 'יופי',
+          icon: 'success',
+          // title: 'יופי',
           text: 'ההודעה נשלחה בהצלחה!',
           timer: 1500
         });
       } catch (err) {
         reject(err)
         await Swal.fire({
-          type: 'error',
-          title: 'אופס',
+          icon: 'error',
+          // title: 'אופס',
           text: 'ההודעה לא נשלחה',
           timer: 1500
         })
