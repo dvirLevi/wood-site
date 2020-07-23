@@ -28,7 +28,7 @@
             </div>
           </div>
           <div class="col-md-4" v-if="product.color">
-            <div class="w-100 center mb-1 mt-2">
+            <div class="w-100 center mb-1 mt-md-2 mt-3">
               <h3 class="text-center">צבע</h3>
             </div>
             <div class="w-100 center">
