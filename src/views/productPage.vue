@@ -56,7 +56,7 @@
         <div class="w-100 center drow mt-5" v-if="product.drow">
           <img class="c-p" :src="product.drow" alt="" @click="showDrow = true">
           <Modal v-if="showDrow && !mobOrDesk" @customEvent="showDrow = !showDrow">
-            <img :src="product.drow" alt="">
+            <img :src="product.drow" alt="drow">
           </Modal>
         </div>
       </div>

@@ -1,7 +1,7 @@
 <template>
-  <div class="row">
+  <section class="row">
     <boxCategory v-for="item in category" :key="item.img" :item="item"  />
-  </div>
+  </section>
 </template>
 
 <script>

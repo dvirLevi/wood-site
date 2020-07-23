@@ -3,15 +3,15 @@
     <div class="col">
       <titleSectionGallery />
       <categorySection />
-      <div class="row row-icons center pt-5 pb-5">
+      <section class="row row-icons center pt-5 pb-5">
         <div class="col-md-2 center icon" v-for="item in icons" :key="item.id">
           <div class="w-100 center">
             <i :class="item.icon"></i>
           </div>
           <h5 class="text-center text-white mt-3">{{item.text}}</h5>
         </div>
-      </div>
-      <div class="row row-details pt-5 pb-5 mt-4">
+      </section>
+      <section class="row row-details pt-5 pb-5 mt-4">
         <div class="col">
           <div class="container">
             <div class="row">
@@ -31,7 +31,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   </div>
 </template>

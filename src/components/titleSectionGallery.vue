@@ -1,9 +1,9 @@
 <template>
-  <div class="row">
+  <section class="row">
     <div class="col">
       <boxGallery :items="gallery" :item="correntImg" :key="correntImg.id" @sendIndex="sendIndex" :ifShowText="ifShowText" @showText="ifShowText = !ifShowText"  />
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

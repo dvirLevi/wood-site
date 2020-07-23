@@ -187,7 +187,7 @@
   form .confirm span {
     color: #ff3d00;
     cursor: pointer;
-    font-size: 22px !important;
+    /* font-size: 22px !important; */
     font-weight: 500 !important;
   }
 
