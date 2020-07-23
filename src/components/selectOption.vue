@@ -56,7 +56,7 @@
   .butt {
     /* background-color: #085f63; */
     border-radius: 5px;
-    color: rgb(0, 0, 0);
+    color: var(--main-text-color);
     font-size: 20px;
     /* font-weight: 100; */
     position: relative;
