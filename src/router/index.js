@@ -29,9 +29,12 @@ Vue.use(VueRouter)
     path: '/pay',
     name: 'pay',
     component: () => import('../views/pay.vue')
+  },
+  {
+    path: '/about',
+    name: 'about',
+    component: () => import('../views/about.vue')
   }
-  
-  
 ]
 
 const router = new VueRouter({

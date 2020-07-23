@@ -144,6 +144,7 @@
     },
     methods: {
       addToCart() {
+        fbq('track', 'AddToCart');
         let product = {
           ...this.product
         };

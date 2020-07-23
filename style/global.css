@@ -172,7 +172,7 @@ a:active {
   font-size: 18px;
 } */
 
-.row-description a {
+.row-description a, .link-color {
   color: #007bff;
 }
 
