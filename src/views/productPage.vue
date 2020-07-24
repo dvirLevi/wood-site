@@ -9,7 +9,7 @@
         <div class="w-100 center">
           <h1 class="text-center">{{product.name}}</h1>
         </div>
-        <div class="col-md-7 mobile-flex">
+        <div class="col-md-7 mobile-flex p-0">
           <imgOfProduct :imgs="product.img" />
         </div>
         <div class="w-100 center mt-4 mb-4">

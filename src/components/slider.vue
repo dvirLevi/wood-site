@@ -100,11 +100,11 @@
 
   @media (max-width: 767.98px) {
     .arrow-l {
-    left: -12px;
+    left: 0px;
   }
 
   .arrow-r {
-    right: -12px;
+    right: 0px;
   }
   }
 </style>
