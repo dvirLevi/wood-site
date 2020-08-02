@@ -110,32 +110,11 @@
         openCart: false,
         selectedColor: 0,
         selectedSize: 0,
-        // allSizes: [{
-        //     name: "כל הסט",
-        //     img: false,
-        //     id: 4
-        //   },
-        //   {
-        //     name: "קטן",
-        //     img: false,
-        //     id: 1
-        //   },
-        //   {
-        //     name: "בינוני",
-        //     img: false,
-        //     id: 2
-        //   },
-        //   {
-        //     name: "גדול",
-        //     img: false,
-        //     id: 3
-        //   },
-
-        // ]
       }
     },
     created() {
       this.selectedSize = this.sizes[0].id;
+
     },
     mounted() {
       fbq('track', 'ViewContent', {
@@ -166,6 +145,9 @@
       },
     },
     computed: {
+      route() {
+        return this.$route.params.id
+      },
       product() {
         let product = this.$store.state.products.filter((val) => {
           return val.id.toString() === this.$route.params.id
@@ -186,14 +168,14 @@
       },
       computeSelectedSize() {
         return this.sizes.filter((val) => {
-            return val.id === this.selectedSize
-          })[0]
+          return val.id === this.selectedSize
+        })[0]
       },
-       computePrice() {
-         let price = this.computeSelectedSize.price;
-         if(this.selectedColor) {
-           price += 100;
-         }
+      computePrice() {
+        let price = this.computeSelectedSize.price;
+        if (this.selectedColor) {
+          price += 100;
+        }
         return price
       },
       amountInPackage() {
@@ -206,6 +188,12 @@
       },
       mobOrDesk() {
         return this.$store.getters.mobOrDesk
+      }
+    },
+    watch: {
+      route: function () {
+        this.selectedColor = 0;
+        this.selectedSize = this.sizes[0].id;
       }
     }
   }

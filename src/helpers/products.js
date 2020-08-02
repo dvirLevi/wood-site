@@ -26,7 +26,7 @@ const products = [{
       },
       {
         name: "קטן",
-        price: 303,
+        price: 290,
         img: false,
         id: 2
       },
@@ -34,7 +34,7 @@ const products = [{
       {
         name: "גדול",
         img: false,
-        price: 401,
+        price: 390,
         id: 3
       },
     ],
@@ -75,7 +75,7 @@ const products = [{
     },
     {
       name: "קטן",
-      price: 216,
+      price: 190,
       img: false,
       id: 2
     },
@@ -83,7 +83,7 @@ const products = [{
     {
       name: "גדול",
       img: false,
-      price: 286,
+      price: 290,
       id: 3
     },
   ],
@@ -124,7 +124,7 @@ const products = [{
     },
     {
       name: "קטן",
-      price: 252,
+      price: 250,
       img: false,
       id: 2
     },
@@ -132,7 +132,7 @@ const products = [{
     {
       name: "גדול",
       img: false,
-      price: 333,
+      price: 330,
       id: 3
     },
   ],
@@ -259,14 +259,14 @@ const products = [{
   type: [
     {
       name: "בינוני",
-      price: 329,
+      price: 390,
       img: false,
       id: 1
     },
     {
       name: "גדול",
       img: false,
-      price: 378,
+      price: 290,
       id: 3
     },
   ],
