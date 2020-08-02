@@ -259,14 +259,14 @@ const products = [{
   type: [
     {
       name: "בינוני",
-      price: 390,
+      price: 290,
       img: false,
       id: 1
     },
     {
       name: "גדול",
       img: false,
-      price: 290,
+      price: 390,
       id: 3
     },
   ],
