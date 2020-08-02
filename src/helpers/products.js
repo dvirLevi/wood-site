@@ -19,18 +19,17 @@ const products = [{
   `,
     type: [
       {
-        name: "בינוני",
-        price: 349,
+        name: "קטן",
+        price: 290,
         img: false,
         id: 1
       },
       {
-        name: "קטן",
-        price: 290,
+        name: "בינוני",
+        price: 349,
         img: false,
         id: 2
       },
-      
       {
         name: "גדול",
         img: false,
@@ -68,17 +67,18 @@ const products = [{
   `,
   type: [
     {
-      name: "בינוני",
-      price: 249,
+      name: "קטן",
+      price: 190,
       img: false,
       id: 1
     },
     {
-      name: "קטן",
-      price: 190,
+      name: "בינוני",
+      price: 249,
       img: false,
       id: 2
     },
+    
     
     {
       name: "גדול",
@@ -117,18 +117,17 @@ const products = [{
   `,
   type: [
     {
-      name: "בינוני",
-      price: 290,
+      name: "קטן",
+      price: 250,
       img: false,
       id: 1
     },
     {
-      name: "קטן",
-      price: 250,
+      name: "בינוני",
+      price: 290,
       img: false,
       id: 2
     },
-    
     {
       name: "גדול",
       img: false,
