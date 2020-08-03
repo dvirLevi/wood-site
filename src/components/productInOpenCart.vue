@@ -58,7 +58,6 @@
          let color = colors.filter((val)=>{
            return val.name === name
          })
-         console.log(color)
          return color[0]
        }
     }

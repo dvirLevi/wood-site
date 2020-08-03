@@ -23,7 +23,7 @@
     border: none;
     background-color: var(--main-text-color);
     color: #ffffff;
-    padding: 15px 25px;
+    padding: 10px 20px;
     outline: none;
     font-weight: 400;
   }

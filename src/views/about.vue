@@ -87,7 +87,7 @@
       async sendMail() {
         if (this.textSend === "שלח טופס") {
           this.textSend = "המתן..."
-          await myMail.sendToMail(this.clientDatdlis, null, "יצירת קשר נאפולי");
+          await myMail.sendToMail(this.clientDatdlis, null, "יצירת קשר שמריהו");
           this.clientDatdlis = {
             ifConfirmMail: true,
           };

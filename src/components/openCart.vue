@@ -11,13 +11,18 @@
       </div>
       
       <div class="w-100 ">
-        <div class="w-100 p-md-4 p-2">
+         <div class="w-100 center-right pr-4">
+          <codeDiscount />
+        </div>
+        <div class="w-100 pl-4 pr-4 pt-3">
           <h3>סכום ביניים</h3>
           <h3>₪{{Payable}}</h3>
         </div>
-        <div class="w-100 border-top p-md-4 p-2 center">
+       
+        <div class="w-100 border-top p-md-4 p-3 center">
           <ButtonLink text="מעבר לסל הקניות" link="/beforePay" class="h5 m-0" />
         </div>
+        
       </div>
       <!-- <nuxt-link class="items-menu" :to="item.link" v-for="item in categories" :key="item.id">
         {{item.text}}
@@ -29,11 +34,13 @@
 
 <script>
   import productInOpenCart from '@/components/productInOpenCart.vue'
+  import codeDiscount from '@/components/codeDiscount.vue'
 
   export default {
     name: 'openCart',
     components: {
-      productInOpenCart
+      productInOpenCart,
+      codeDiscount
     },
     props: {
 

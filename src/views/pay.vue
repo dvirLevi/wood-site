@@ -6,7 +6,8 @@
           <div class="col-md-6">
             <h4>פרטי ההזמנה</h4>
             <div class="w-100" v-for="product in inCart" :key="product.id">
-              <P class="font-weight-bold">{{ product.name }}</P>
+              <P class="font-weight-bold">{{ product.name }}<span v-if="product.size"> | {{product.size}} | </span><span
+                  v-if="correntColor(product.color)">{{correntColor(product.color).name}}</span></P>
               <P>מחיר: {{ product.price }} ₪</P>
               <P>כמות: {{ product.amount }}</P>
               <P>סה"כ למוצר: {{ product.amount * product.price }}</P>
@@ -16,6 +17,7 @@
               <p class="w-100" v-if="ifMessenger">
                 משלוח עד הבית {{ messengerPrice }} ₪
               </p>
+              <h5 v-if="discount">הנחה {{discount}}%</h5>
               <h5>סה"כ לתשלום: {{ PayablePlusMessenger }} ₪</h5>
               <!-- <h5>סה"כ לתשלום <span v-if="messenger">כולל משלוח</span>: {{allPayable}} ₪</h5> -->
             </div>
@@ -88,6 +90,7 @@
   // import productInOpenCart from '@/components/productInOpenCart.vue'
   import vSelect from "vue-select";
   import "vue-select/dist/vue-select.css";
+  import colors from '@/helpers/colors.js'
 
   export default {
     name: "beforePay",
@@ -100,7 +103,7 @@
       };
     },
     mounted() {
-       fbq('track', 'ViewContent', {
+      fbq('track', 'ViewContent', {
         content_name: this.$route.name,
       });
       setTimeout(() => {
@@ -112,6 +115,13 @@
         let vat = num / 1.17;
         return vat.toFixed(2);
       },
+      correntColor(name) {
+        let color = colors.filter((val) => {
+          return val.name === name
+        })
+        console.log(color)
+        return color[0]
+      }
     },
     computed: {
       inCart() {
@@ -119,6 +129,12 @@
       },
       clientDatdlis() {
         return this.$store.state.clientDatdlis;
+      },
+      discount() {
+        return this.$store.state.discount
+      },
+      PayableBeforeDiscount() {
+        return this.$store.getters.PayableBeforeDiscount;
       },
       Payable() {
         return this.$store.getters.Payable;
@@ -160,7 +176,7 @@
             product_price: this.vat(this.inCart[x].price),
           });
         }
-        if (this.priceMessenger) {
+        if (this.messengerPrice) {
           json.push({
             product_name: "משלוח",
             product_quantity: 1,
@@ -168,15 +184,15 @@
             product_price: this.vat(this.messengerPrice),
           });
         }
-        // if (this.discount) {
-        //   let vatDiscount = this.Payable - this.PayablePlusDiscount;
-        //   json.push({
-        //     product_name: "הנחה 10%",
-        //     product_quantity: 1,
-        //     product_price: -this.vat(vatDiscount),
-        //     // product_price: - vatDiscount,
-        //   })
-        // }
+        if (this.discount) {
+          let vatDiscount = this.PayableBeforeDiscount - this.Payable;
+          json.push({
+            product_name: `הנחה ${this.discount}%`,
+            product_quantity: 1,
+            product_price: -this.vat(vatDiscount),
+            // product_price: - vatDiscount,
+          })
+        }
         return encodeURIComponent(JSON.stringify(json));
       },
       ifWidth() {

@@ -10,7 +10,9 @@
         <h4 class="w-100 text-center" v-else>אין מוצרים בעגלה</h4>
         <template v-if="inCart.length">
           <div class="w-100 center border-top p-4">
-            <!-- <p class="w-100" v-if="discount">הנחת קופון: {{discount}}%-</p> -->
+            <div class="w-100 center-right">
+          <codeDiscount class="mb-3" />
+        </div>
             <p class="w-100">סה"כ: {{ Payable }} ₪</p>
             <template v-if="ifMessenger">
               <p class="w-100">משלוח עד הבית {{ messengerPrice }} ₪</p>
@@ -88,6 +90,7 @@
   import productInOpenCart from "@/components/productInOpenCart.vue";
   import TitleAndBorderC from "@/components/TitleAndBorderC.vue";
   import Regulations from "@/components/Regulations.vue";
+  import codeDiscount from "@/components/codeDiscount.vue";
   import Swal from "sweetalert2";
 
   export default {
@@ -96,6 +99,7 @@
       productInOpenCart,
       TitleAndBorderC,
       Regulations,
+      codeDiscount
     },
     data() {
       return {

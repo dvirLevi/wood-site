@@ -11,6 +11,7 @@ export default new Vuex.Store({
     messengerPrice: 100,
     ifMessenger: true,
     inCart: [],
+    discount: 0,
     categories: [{
         name: "בית",
         link: "/",
@@ -36,10 +37,22 @@ export default new Vuex.Store({
       // })
       return state.inCart
     },
+    PayableBeforeDiscount: (state, getters) => {
+      let Payable = 0;
+      for (let x in getters.inCart) {
+        Payable += getters.inCart[x].amount * getters.inCart[x].price;
+      }
+      return Payable
+    },
     Payable: (state, getters) => {
       let Payable = 0;
       for (let x in getters.inCart) {
         Payable += getters.inCart[x].amount * getters.inCart[x].price;
+      }
+      if (state.discount) {
+        let x = Payable / 100;
+        let y = x * state.discount
+        return Payable - y;
       }
       return Payable
     },
@@ -102,6 +115,9 @@ export default new Vuex.Store({
     setWindowWidth(state, windowWidth) {
       state.windowWidth = windowWidth;
     },
+    pushCode(state, discount) {
+      state.discount = discount
+    }
   },
   actions: {},
   modules: {}
