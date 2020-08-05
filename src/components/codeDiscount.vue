@@ -6,7 +6,7 @@
           <input class="ml-2" type="text" @click.stop="" v-model="myCode" placeholder="הכנס קוד קופון">
           <ButtonLink text="הפעל"  @customEvent="checkCode" type="button" />
         </template>
-        <P class="w-100 text-center" v-else>הנחה של {{discount}}% הופעלה!</P>
+        <P class="w-100 text-center m-0" v-else>הנחה של {{discount}}% הופעלה!</P>
       </div>
     <!-- </div> -->
   <!-- </div> -->
