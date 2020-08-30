@@ -1,9 +1,9 @@
 <template>
   <!-- <div class="w-100 center-all"> -->
-  <div class="butt p-2 c-p center-between m-1" @click="showMenu = !showMenu"
+  <div class="butt p-2 c-p center m-1" @click="showMenu = !showMenu"
     :style="{border: '1px solid' + themeColor, width: width + 'px' }">
     <p class="m-0">{{correntSelect.name}}</p>
-    <div class="img-cover img-color" v-if="correntSelect.img" :style="{backgroundImage: `url(${correntSelect.img})`}">
+    <div class="img-cover img-color mr-2" v-if="correntSelect.img" :style="{backgroundImage: `url(${correntSelect.img})`}">
     </div>
     <div class="menu w-100 center" v-if="showMenu">
       <div class="w-100 center-between p-1 border-top border-bottem m-0 c-p" v-for="item in items" :key="item.id"

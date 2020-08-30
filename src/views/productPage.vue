@@ -12,9 +12,7 @@
         <div class="col-md-7 mobile-flex p-0">
           <imgOfProduct :imgs="product.img" />
         </div>
-        <div class="w-100 center mt-4 mb-4">
-          <h5>₪{{computePrice}}</h5>
-        </div>
+        
         <div class="w-100 center mb-4">
           <h4 class="text-center">{{product.description}}</h4>
         </div>
@@ -29,7 +27,7 @@
           </div>
           <div class="col-md-4" v-if="product.color">
             <div class="w-100 center mb-1 mt-md-2 mt-3">
-              <h3 class="text-center">צבע</h3>
+              <h3 class="text-center">תוספת צבע</h3>
             </div>
             <div class="w-100 center">
               <selectOption :items="colors" :defulteSelect="selectedColor" themeColor="#444444"
@@ -46,10 +44,12 @@
             </div>
           </div>
         </div>
+<div class="w-100 center mt-4 mb-4">
+          <h2>₪{{computePrice}}</h2>
+        </div>
 
 
-
-        <div class="w-100 center mt-5">
+        <div class="w-100 center mt-4">
           <ButtonLink text="הוסף לעגלה" @customEvent="addToCart" class=" h5" />
           <openCart v-if="openCart" @close="openCart = !openCart" />
         </div>
@@ -219,10 +219,10 @@
     font-weight: 400;
   }
 
-  .page-product h5 {
+  /* .page-product h5 {
     font-size: 18px;
     font-weight: 300;
-  }
+  } */
 
   .row-description .description {
     border-left: solid #dee2e6 1px;

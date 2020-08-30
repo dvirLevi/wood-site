@@ -70,11 +70,11 @@
             text: "רכישה מאובטחת",
             id: 4
           },
-          {
-            icon: "las la-star-of-david",
-            text: "תוצרת ישראל",
-            id: 5
-          },
+          // {
+          //   icon: "las la-star-of-david",
+          //   text: "תוצרת ישראל",
+          //   id: 5
+          // },
         ],
         questions: [{
             question: "האם האדניות עשויות מעץ מלא?",
