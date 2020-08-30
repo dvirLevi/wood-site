@@ -16,7 +16,6 @@
 </template>
 
 <script>
-  // @ is an alias to /src
   import boxProduct from '@/components/boxProduct.vue'
 
   export default {
