@@ -54,7 +54,13 @@
     /* border: 1px solid #000; */
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
+      -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
   }
+
+    .box-slider::-webkit-scrollbar {
+    display: none;
+}
 
   .arrow-l {
     position: absolute;
@@ -72,30 +78,6 @@
     top: 40%;
     font-size: 50px;
     text-shadow: 1px 1px 9px #fff;
-  }
-
-  /* .slider {
-    width: max-content;
-  } */
-
-  /* width */
-  .box-slider::-webkit-scrollbar {
-    height: 3px;
-  }
-
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1;
-  }
-
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #888;
-  }
-
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555;
   }
 
   @media (max-width: 767.98px) {
