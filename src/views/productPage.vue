@@ -45,7 +45,7 @@
           </div>
         </div>
 <div class="w-100 center mt-4 mb-4">
-          <h2>₪{{computePrice}}</h2>
+          <h2>{{computePrice}} ₪</h2>
         </div>
 
 
