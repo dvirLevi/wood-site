@@ -7,7 +7,7 @@
     <div class="w-100 center">
       <img src="../assets/ass20.jpg" alt="">
     </div>
-    <h2 class="text-center font-weight-bold mt-4">מבצע השקה בשׁמַרְיָהוּ</h2>
+    <h2 class="text-center font-weight-bold mt-4">מבצע השקה בשְׁמַרְיָהוּ</h2>
     <h2 class="text-center mt-3">הכניסו עכשיו את קוד הקופון <span class="font-weight-bold">HASHAKA</span> בעגלת הקניות </h2>
     <h1 class="text-center font-weight-bold">וקבלו 10 אחוז הנחה על כל המוצרים באתר!!!</h1>
     <div class="w-100 center-all">
