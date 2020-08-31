@@ -22,7 +22,7 @@
               <h3 class="text-center">כמות <span v-if="amountInPackage">{{amountInPackage}}</span></h3>
             </div>
             <div class="w-100 center mt-2">
-              <counter @customEvent="amount = $event" :passAmount="amount" operation="incroment" />
+              <counter @customEvent="amount = $event" :passAmount="amount" :key="amount" operation="incroment" />
             </div>
           </div>
           <div class="col-md-4" v-if="product.color">

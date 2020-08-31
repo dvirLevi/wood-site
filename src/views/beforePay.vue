@@ -13,7 +13,7 @@
             <div class="w-100 center-right">
           <codeDiscount class="mb-3" />
         </div>
-            <p class="w-100">סה"כ: {{ Payable }} ₪  <span v-if="discountMoreTwo">(קבלת 15% אחוז הנחה)</span> </p>
+            <p class="w-100">סה"כ: {{ Payable }} ₪  <span v-if="discountMoreTwo">(15% הנחה בקניית 2 אדניות ומעלה)</span> </p>
             <template v-if="ifMessenger">
               <p class="w-100">משלוח עד הבית {{ messengerPrice }} ₪</p>
               <p class="w-100">
