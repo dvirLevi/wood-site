@@ -13,7 +13,7 @@
             <div class="w-100 center-right">
           <codeDiscount class="mb-3" />
         </div>
-            <p class="w-100">סה"כ: {{ Payable }} ₪</p>
+            <p class="w-100">סה"כ: {{ Payable }} ₪  <span v-if="discountMoreTwo">(קבלת 15% אחוז הנחה)</span> </p>
             <template v-if="ifMessenger">
               <p class="w-100">משלוח עד הבית {{ messengerPrice }} ₪</p>
               <p class="w-100">
@@ -142,6 +142,9 @@
       ifMessenger() {
         return this.$store.state.ifMessenger;
       },
+       discountMoreTwo() {
+        return this.$store.getters.discountMoreTwo;
+      }
     },
   };
 </script>

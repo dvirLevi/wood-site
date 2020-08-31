@@ -54,7 +54,7 @@
           <openCart v-if="openCart" @close="openCart = !openCart" />
         </div>
         <div class="w-100 center mt-2" v-if="product.category === '1'">
-          <h3 class="text-center">15 אחוז הנחה בקנייה של 2 אדניות ומעלה!!!</h3>
+          <h3 class="text-center blue">15 אחוז הנחה בקנייה של 2 אדניות ומעלה!!!</h3>
         </div>
         <div class="w-100 center drow mt-5" v-if="product.drow">
           <img class="c-p" :src="product.drow" alt="" @click="showDrow = true">
@@ -197,6 +197,7 @@
       route: function () {
         this.selectedColor = 0;
         this.selectedSize = this.sizes[0].id;
+        this.amount = 1;
       }
     }
   }
@@ -238,6 +239,10 @@
 
   .drow img {
     width: 100%;
+  }
+
+  .blue {
+    color: #6787a9;
   }
 
   @media (max-width: 767.98px) {
