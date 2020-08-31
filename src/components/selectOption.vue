@@ -6,7 +6,7 @@
     <div class="img-cover img-color mr-2" v-if="correntSelect.img" :style="{backgroundImage: `url(${correntSelect.img})`}">
     </div>
     <div class="menu w-100 center" v-if="showMenu">
-      <div class="w-100 center-between p-1 border-top border-bottem m-0 c-p" v-for="item in items" :key="item.id"
+      <div class="w-100 center-between p-1 border-top border-bottem m-0 c-p pt-3 pb-3" v-for="item in items" :key="item.id"
         @click="select(item)">
         <p>{{item.name}}</p>
         <div class="img-cover img-color" v-if="item.img" :style="{backgroundImage: `url(${item.img})`}">
