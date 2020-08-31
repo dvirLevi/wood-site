@@ -32,9 +32,6 @@ export default new Vuex.Store({
   },
   getters: {
     inCart: (state) => {
-      // let inCart = state.products.filter((value) => {
-      //   return value.amount > 0
-      // })
       return state.inCart
     },
     PayableBeforeDiscount: (state, getters) => {
@@ -44,6 +41,22 @@ export default new Vuex.Store({
       }
       return Payable
     },
+    discountMoreTwo(state, getters) {
+      let ifExist = getters.inCart.filter((val) => {
+        return val.category === "1"
+      })
+      if (ifExist.length > 1) {
+        return 15
+      }
+      let ifExist2 = ifExist.filter((val) => {
+        return val.amount > 1
+      })
+      // console.log(ifExist2)
+      if(ifExist2.length) {
+        return 15
+      }
+      return 0
+    },
     Payable: (state, getters) => {
       let Payable = 0;
       for (let x in getters.inCart) {
@@ -52,6 +65,11 @@ export default new Vuex.Store({
       if (state.discount) {
         let x = Payable / 100;
         let y = x * state.discount
+        return Payable - y;
+      }
+      if (getters.discountMoreTwo) {
+        let x = Payable / 100;
+        let y = x * getters.discountMoreTwo
         return Payable - y;
       }
       return Payable
@@ -65,7 +83,7 @@ export default new Vuex.Store({
     },
     messengerPrice: (state, getters) => {
       let price = 50;
-      for(let i in getters.inCart) {
+      for (let i in getters.inCart) {
         if (getters.inCart[i].id !== 8 && getters.inCart[i].id !== 7 && getters.inCart[i].id !== 4) {
           price = 100;
         }
@@ -101,9 +119,9 @@ export default new Vuex.Store({
       if (!ifExist) {
         if (item.operation === "+") {
           state.inCart.push(item.obj)
-        }else if (item.operation === "-") {
-          let index = state.inCart.findIndex((el)=>{
-              el.id === item.obj.id
+        } else if (item.operation === "-") {
+          let index = state.inCart.findIndex((el) => {
+            el.id === item.obj.id
           })
           state.inCart.splice(index, 1)
         }

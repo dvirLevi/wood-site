@@ -1,5 +1,8 @@
 <template>
   <router-link :to="'/productPage/'+item.id" class="box-product p-2 center" :style="{minWidth: `calc(100% / ${numInLine} + 0px)`}">
+  <div class="label center" v-if="item.label">
+    {{item.label}}
+  </div>
     <div class="w-100 img-cover img-product" :style="{backgroundImage: `url(${item.img[0]})`}">
 
     </div>
@@ -43,6 +46,19 @@
   .box-product {
     /* min-width: calc(100% / 3 + 0px); */
     scroll-snap-align: end;
+    position: relative;
+  }
+
+  .label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    /* border-radius: 100px; */
+    background-color: #6787a9;
+    color: #fff;
   }
 
   .box-product .img-product {

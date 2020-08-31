@@ -1,10 +1,19 @@
 <template>
   <div class="container mt-5">
     <div class="row">
-      <div class="col">
-        <h5 class="text-center font-weight-light" v-if="$route.params.id != 2">שְׁמַרְיָהוּ הוא מפעל קטן ואיכותי לאדניות עץ כפריות. המוצרים שלנו עשויים מחומרי הגלם האיכותיים והחזקים ביותר. <br> דברו איתנו - <a href="https://api.whatsapp.com/send?phone=972537234223">
-            <i class="lab la-whatsapp ml-2"></i>
-          </a></h5>
+      <div class="col center">
+        <h5 class="text-center font-weight-light" v-if="$route.params.id != 2">שְׁמַרְיָהוּ הוא מפעל קטן ואיכותי לאדניות
+          עץ כפריות. המוצרים שלנו עשויים מחומרי הגלם האיכותיים והחזקים ביותר.</h5>
+        <div class="w-100 center mt-3 mb-3">
+          <h5>דברו איתנו -
+            
+          </h5>
+          <div class="wrap-w center w mr-2">
+              <a href="https://api.whatsapp.com/send?phone=972537234223">
+                <i class="lab la-whatsapp"></i>
+              </a>
+            </div>
+        </div>
       </div>
     </div>
     <div class="row">
@@ -51,5 +60,19 @@
 </script>
 
 <style scoped>
+i {
+    font-size: 35px;
+    color: #ffffff;
+  }
 
+  .wrap-w {
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    box-shadow: 0 0 14px #000000bd;
+  }
+
+  .w {
+    background-color: #2cb742;
+  }
 </style>

@@ -1,15 +1,11 @@
 <template>
-  <!-- <div class="row" v-if="products.length"> -->
-    <!-- <div class="col"> -->
-      <div class="center-right">
-        <template v-if="!discount">
-          <input class="ml-2" type="text" @click.stop="" v-model="myCode" placeholder="הכנס קוד קופון">
-          <ButtonLink text="הפעל"  @customEvent="checkCode" type="button" />
-        </template>
-        <P class="w-100 text-center m-0" v-else>הנחה של {{discount}}% הופעלה!</P>
-      </div>
-    <!-- </div> -->
-  <!-- </div> -->
+  <div class="center-right" v-if="!discountMoreTwo">
+    <template v-if="!discount">
+      <input class="ml-2" type="text" @click.stop="" v-model="myCode" placeholder="הכנס קוד קופון">
+      <ButtonLink text="הפעל" @customEvent="checkCode" type="button" />
+    </template>
+    <P class="w-100 text-center m-0" v-else>הנחה של {{discount}}% הופעלה!</P>
+  </div>
 </template>
 
 <script>
@@ -48,9 +44,9 @@
       // ifCode() {
       //   return this.$store.state.ifCode
       // },
-      // ifNapoliDeal() {
-      //   return this.$store.getters.ifNapoliDeal;
-      // }
+      discountMoreTwo() {
+        return this.$store.getters.discountMoreTwo;
+      }
     },
     // watch: {
     //   products: function (products) {
@@ -98,7 +94,7 @@
 </script>
 
 <style scoped>
- input {
+  input {
     width: 50%;
     border-radius: 5px;
     border: solid var(--main-text-color) 1px;

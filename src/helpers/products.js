@@ -326,6 +326,7 @@ const products = [{
     previousPrice: 0,
     amount: 1,
     category: "2",
+    label: "אזל מהמלאי",
     id: 8
   },
 ]
