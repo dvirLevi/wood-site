@@ -13,7 +13,7 @@
       <div class="w-100 ">
          <div class="w-100 center-right pr-4">
           <codeDiscount />
-          <h5 v-if="discountMoreTwo">15% הנחה בקניית 2 אדניות ומעלה</h5>
+          <h6 v-if="discountMoreTwo">15% הנחה בקניית 2 אדניות ומעלה</h6>
         </div>
         <div class="w-100 pl-4 pr-4 pt-3">
           <h3>סכום ביניים</h3>
